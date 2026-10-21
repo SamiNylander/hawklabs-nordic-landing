@@ -133,3 +133,9 @@ Stack trace:
 #2 [internal function]: WP_Fatal_Error_Handler->handle()
 #3 {main}
   thrown in E:\0914\hawklabsNordic\app\public\wp-includes\l10n.php on line 857
+[21-Oct-2026 21:28:52 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public\wp-load.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-blog-header.php on line 13
+[21-Oct-2026 21:28:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public\wp-load.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-blog-header.php:13
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\index.php(17): require()
+#1 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-blog-header.php on line 13
