@@ -7,3 +7,129 @@ Stack trace:
 #4 E:\0914\hawklabsNordic\app\public\index.php(17): require('E:\\0914\\hawklab...')
 #5 {main}
   thrown in E:\0914\hawklabsNordic\app\public\wp-content\themes\twentytwentyfive\functions.php on line 160
+[21-Oct-2026 14:44:49 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public\wp-includes\version.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 34
+[21-Oct-2026 14:44:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/version.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:34
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-blog-header.php(13): require_once('E:\\0914\\hawklab...')
+#3 E:\0914\hawklabsNordic\app\public\index.php(17): require('E:\\0914\\hawklab...')
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 34
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin.php(35): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:122
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 122
+[21-Oct-2026 14:46:19 UTC] PHP Warning:  require_once(E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php): Failed to open stream: No such file or directory in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/pomo/mo.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-includes\load.php:1542
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(176): wp_load_translations_early()
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(156): WP_Fatal_Error_Handler->display_default_error_template(Array, false)
+#2 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(60): WP_Fatal_Error_Handler->display_error_template(Array, false)
+#3 [internal function]: WP_Fatal_Error_Handler->handle()
+#4 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\load.php on line 1542
+[21-Oct-2026 14:46:24 UTC] PHP Warning:  require(E:\0914\hawklabsNordic\app\public\wp-includes\rest-api\search\class-wp-rest-search-handler.php): Failed to open stream: Resource temporarily unavailable in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 374
+[21-Oct-2026 14:46:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\0914\hawklabsNordic\app\public/wp-includes/rest-api/search/class-wp-rest-search-handler.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in E:\0914\hawklabsNordic\app\public\wp-settings.php:374
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once()
+#1 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-admin\admin-ajax.php(22): require_once('E:\\0914\\hawklab...')
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-settings.php on line 374
+[21-Oct-2026 14:46:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in E:\0914\hawklabsNordic\app\public\wp-includes\l10n.php:857
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-includes\l10n.php(960): load_textdomain('default', 'E:\\0914\\hawklab...', 'sv_SE')
+#1 E:\0914\hawklabsNordic\app\public\wp-includes\class-wp-fatal-error-handler.php(49): load_default_textdomain()
+#2 [internal function]: WP_Fatal_Error_Handler->handle()
+#3 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-includes\l10n.php on line 857
