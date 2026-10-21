@@ -1,0 +1,9 @@
+[17-Oct-2026 22:30:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function register_page_template() in E:\0914\hawklabsNordic\app\public\wp-content\themes\twentytwentyfive\functions.php:160
+Stack trace:
+#0 E:\0914\hawklabsNordic\app\public\wp-settings.php(747): include()
+#1 E:\0914\hawklabsNordic\app\public\wp-config.php(103): require_once('E:\\0914\\hawklab...')
+#2 E:\0914\hawklabsNordic\app\public\wp-load.php(50): require_once('E:\\0914\\hawklab...')
+#3 E:\0914\hawklabsNordic\app\public\wp-blog-header.php(13): require_once('E:\\0914\\hawklab...')
+#4 E:\0914\hawklabsNordic\app\public\index.php(17): require('E:\\0914\\hawklab...')
+#5 {main}
+  thrown in E:\0914\hawklabsNordic\app\public\wp-content\themes\twentytwentyfive\functions.php on line 160

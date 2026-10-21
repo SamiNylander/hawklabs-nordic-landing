@@ -1,0 +1,146 @@
+{
+	"meta": {
+		"title": "HawkLabs Nordic — Användbar teknik för vardagen",
+		"description": "HawkLabs Nordic utvecklar genomtänkta digitala produkter som gör vardagen enklare, smartare och mindre frustrerande.",
+		"locale": "sv_SE"
+	},
+	"header": {
+		"home": "HawkLabs Nordic startsida"
+	},
+	"nav": {
+		"label": "Huvudmeny",
+		"why": "Varför vi bygger",
+		"products": "Produkter",
+		"values": "Vårt arbetssätt",
+		"builder": "Byggaren",
+		"follow": "Följ resan"
+	},
+	"language": {
+		"label": "Välj språk",
+		"swedish": "🇸🇪 Svenska",
+		"english": "🇬🇧 English"
+	},
+	"hero": {
+		"eyebrow": "Ett fristående nordiskt innovationslabb",
+		"headlineStart": "Vi bygger användbar teknik",
+		"headlineAccent": "för vardagen",
+		"copy": "HawkLabs Nordic utvecklar genomtänkta digitala produkter som gör livet enklare, smartare och mindre frustrerande.",
+		"explore": "Utforska våra produkter",
+		"follow": "Följ vår resa",
+		"proof": "Vi utvecklar produkter för arbetssökande, gamers, djurägare och människor i vardagen.",
+		"artLabel": "HawkLabs Nordic, ett fristående innovationslabb i Sverige",
+		"logoPreview": "Förhandsvisa HawkLabs logotypanimation",
+		"caption": "Nyfikenhet från Norrköping. Användbara idéer för vardagen."
+	},
+	"why": {
+		"eyebrow": "Tanken bakom arbetet",
+		"title": "Varför vi bygger",
+		"paragraph1": "Vi tror att teknik ska lösa problem som människor faktiskt upplever.",
+		"paragraph2": "I stället för att bygga för trender letar vi efter vardagsutmaningar som är värda att förenkla — även sådana vi själva har upplevt. Sedan bygger, lyssnar och förbättrar vi tillsammans med människorna som lösningarna är till för.",
+		"paragraph3": "Vårt nordiska perspektiv gör arbetet praktiskt, ärligt och förankrat i tillit. Nyfikenhet hjälper oss att ställa bättre frågor; framsteg handlar om att lansera, lyssna och förbättra.",
+		"noteTitle": "Människan först",
+		"noteCopy": "Användbar teknik ska förtjäna sin plats i någons vardag: mindre friktion, större trygghet och lite mer utrymme för det som betyder något."
+	},
+	"products": {
+		"eyebrow": "Idéer som blir till nytta",
+		"title": "Det här bygger vi",
+		"intro": "Olika vardagsproblem, en gemensam övertygelse: genomtänkta verktyg kan göra verklig skillnad.",
+		"problemLabel": "Problemet:",
+		"jobhawk": {
+			"name": "JobHawk",
+			"status": "Lanseras",
+			"tagline": "En tryggare väg genom jobbsökandet.",
+			"description": "En AI-driven karriärcoach som hjälper människor att förbättra sitt CV, skriva ansökningar och hitta vägen till nästa möjlighet.",
+			"problem": "Att söka jobb kan kännas förvirrande och ensamt, och det kan vara svårt att veta var man ska börja.",
+			"preview": "Spela upp produktvisning för JobHawk",
+			"imageAlt": "JobHawks gränssnitt för jobbsökande"
+		},
+		"spothawk": {
+			"name": "SpotHawk",
+			"status": "Under utveckling",
+			"tagline": "Få ut mer av laddarna som redan finns.",
+			"description": "Delning av privata elbilsladdare mellan användare, så att förare kan hitta laddning och hushåll kan dela sin laddare.",
+			"problem": "Det kan vara svårt att hitta smidig laddning när du är hemifrån.",
+			"preview": "Spela upp produktvisning för SpotHawk",
+			"imageAlt": "SpotHawks skärm för elbilsladdning"
+		},
+		"badgehawk": {
+			"name": "BadgeHawk",
+			"status": "Beta",
+			"tagline": "Ge teamet en identitet som känns helt er egen.",
+			"description": "Ett kreativt verktyg för att skapa professionella AI-genererade emblem, logotyper och spelidentiteter för team och gemenskaper.",
+			"problem": "Små team förtjänar en genomarbetad visuell identitet som speglar människorna bakom den.",
+			"preview": "Spela upp produktvisning för BadgeHawk",
+			"imageAlt": "Förhandsvisning av emblem skapat i BadgeHawk"
+		},
+		"myfluffy": {
+			"name": "MyFluffy",
+			"status": "Prototyp",
+			"tagline": "Lite mer trygghet för dig som älskar djur.",
+			"description": "Uppkopplad teknik för husdjur som utforskar hur genomtänkt spårning och hälsoinsikter kan stärka bandet mellan människor och deras djur.",
+			"problem": "Det är svårt att ta hand om sådant man inte kan förstå eller hålla koll på.",
+			"preview": "Spela upp produktvisning för MyFluffy",
+			"imageAlt": "Koncept för MyFluffys hälsoöversikt för husdjur"
+		}
+	},
+	"values": {
+		"eyebrow": "Några principer vi återkommer till",
+		"title": "Så vill vi bygga",
+		"intro": "Inte en handbok för sakens skull, utan principer som hjälper oss att hålla arbetet ärligt och användbart.",
+		"people": {
+			"label": "01 / MÄNNISKOR",
+			"title": "Människan först",
+			"copy": "Teknik ska tjäna människor, inte be människor att tjäna tekniken."
+		},
+		"clarity": {
+			"label": "02 / TYDLIGHET",
+			"title": "Enkelhet vinner",
+			"copy": "Komplexa problem förtjänar lösningar som känns självklara."
+		},
+		"intention": {
+			"label": "03 / MENING",
+			"title": "Bygg med syfte",
+			"copy": "Allt vi skapar ska hjälpa till att lösa ett problem som betyder något."
+		},
+		"learning": {
+			"label": "04 / LÄRANDE",
+			"title": "Framsteg före perfektion",
+			"copy": "Lansera. Lär. Förbättra. Fortsätt lyssna längs vägen."
+		}
+	},
+	"future": {
+		"eyebrow": "Tidiga idéer, öppna möjligheter",
+		"title": "På gång i labbet",
+		"intro": "Vissa idéer är fortfarande bara frågor på en whiteboard. Det här är framtida koncept, inte produkter under utveckling — vi är nyfikna på vart de kan leda.",
+		"concept": "Framtida koncept",
+		"homehawk": "HomeHawk",
+		"autohawk": "AutoHawk",
+		"dealhawk": "DealHawk"
+	},
+	"founder": {
+		"eyebrow": "En person, många frågor",
+		"title": "Möt byggaren",
+		"paragraph1": "Jag är en svensk utvecklare, fotbollstränare och teknikentusiast. Jag har alltid trott att vardagsproblem förtjänar bättre lösningar — och att det bästa sättet att hitta dem är att vara nyfiken, skapa något konkret och lyssna på människorna som lösningen är till för.",
+		"paragraph2": "HawkLabs är platsen där jag förverkligar de frågorna, ett experiment i taget. Vissa idéer kommer att förändras längs vägen. Det är en del av att bygga med ett tydligt syfte.",
+		"signoff": "Byggt i Sverige. Delar resan medan den pågår.",
+		"imageAlt": "HawkLabs byggare i en tröja med HawkLabs logotyp"
+	},
+	"community": {
+		"eyebrow": "Följ med när vi bygger",
+		"title": "Följ HawkLabs resa",
+		"copy": "Få först veta om produktlanseringar, ärliga lägesuppdateringar och nya experiment från labbet.",
+		"button": "Gå med i gemenskapen",
+		"note": "Knappen öppnar ett mejl till labbet så att du kan ta kontakt direkt.",
+		"emailHref": "mailto:info@jobhawk.se?subject=F%C3%B6lj%20HawkLabs%20resa"
+	},
+	"footer": {
+		"brand": "Vi bygger sådant som gör nytta.",
+		"audience1": "För arbetssökande.",
+		"audience2": "För gamers.",
+		"audience3": "För djurägare.",
+		"audience4": "För människor i vardagen.",
+		"built": "Byggt i Sverige.",
+		"curiosity": "Byggt med nyfikenhet.",
+		"help": "Byggt för att hjälpa."
+	}
+}
