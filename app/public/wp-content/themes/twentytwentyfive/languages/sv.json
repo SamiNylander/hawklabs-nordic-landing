@@ -49,6 +49,7 @@
 		"jobhawk": {
 			"name": "JobHawk",
 			"status": "Lanseras",
+			"linkLabel": "Besök JobHawk",
 			"tagline": "En tryggare väg genom jobbsökandet.",
 			"description": "En AI-driven karriärcoach som hjälper människor att förbättra sitt CV, skriva ansökningar och hitta vägen till nästa möjlighet.",
 			"problem": "Att söka jobb kan kännas förvirrande och ensamt, och det kan vara svårt att veta var man ska börja.",
@@ -58,6 +59,7 @@
 		"spothawk": {
 			"name": "SpotHawk",
 			"status": "Under utveckling",
+			"linkLabel": "Få uppdateringar om SpotHawk",
 			"tagline": "Få ut mer av laddarna som redan finns.",
 			"description": "Delning av privata elbilsladdare mellan användare, så att förare kan hitta laddning och hushåll kan dela sin laddare.",
 			"problem": "Det kan vara svårt att hitta smidig laddning när du är hemifrån.",
@@ -67,6 +69,7 @@
 		"badgehawk": {
 			"name": "BadgeHawk",
 			"status": "Beta",
+			"linkLabel": "Få uppdateringar om BadgeHawk",
 			"tagline": "Ge teamet en identitet som känns helt er egen.",
 			"description": "Ett kreativt verktyg för att skapa professionella AI-genererade emblem, logotyper och spelidentiteter för team och gemenskaper.",
 			"problem": "Små team förtjänar en genomarbetad visuell identitet som speglar människorna bakom den.",
@@ -76,6 +79,7 @@
 		"myfluffy": {
 			"name": "MyFluffy",
 			"status": "Prototyp",
+			"linkLabel": "Få uppdateringar om MyFluffy",
 			"tagline": "Lite mer trygghet för dig som älskar djur.",
 			"description": "Uppkopplad teknik för husdjur som utforskar hur genomtänkt spårning och hälsoinsikter kan stärka bandet mellan människor och deras djur.",
 			"problem": "Det är svårt att ta hand om sådant man inte kan förstå eller hålla koll på.",
@@ -108,30 +112,34 @@
 			"copy": "Lansera. Lär. Förbättra. Fortsätt lyssna längs vägen."
 		}
 	},
-	"future": {
-		"eyebrow": "Tidiga idéer, öppna möjligheter",
-		"title": "På gång i labbet",
-		"intro": "Vissa idéer är fortfarande bara frågor på en whiteboard. Det här är framtida koncept, inte produkter under utveckling — vi är nyfikna på vart de kan leda.",
-		"concept": "Framtida koncept",
-		"homehawk": "HomeHawk",
-		"autohawk": "AutoHawk",
-		"dealhawk": "DealHawk"
-	},
 	"founder": {
-		"eyebrow": "En person, många frågor",
+		"eyebrow": "Lite om personen bakom HawkLabs",
 		"title": "Möt byggaren",
-		"paragraph1": "Jag är en svensk utvecklare, fotbollstränare och teknikentusiast. Jag har alltid trott att vardagsproblem förtjänar bättre lösningar — och att det bästa sättet att hitta dem är att vara nyfiken, skapa något konkret och lyssna på människorna som lösningen är till för.",
-		"paragraph2": "HawkLabs är platsen där jag förverkligar de frågorna, ett experiment i taget. Vissa idéer kommer att förändras längs vägen. Det är en del av att bygga med ett tydligt syfte.",
+		"greeting": "Hej, jag heter Sami.",
+		"paragraph1": "Jag är teknikentusiast, fotbollstränare och problemlösare sedan barnsben från Sverige.",
+		"paragraph2": "HawkLabs Nordic började med en enkel övertygelse: teknik ska göra vardagen enklare, inte mer komplicerad.",
+		"paragraph3": "Oavsett om det handlar om att hjälpa någon att hitta ett jobb, ta hand om ett husdjur, skapa något meningsfullt eller lösa vardagens frustrationer är mitt mål att bygga produkter som hjälper riktiga människor.",
 		"signoff": "Byggt i Sverige. Delar resan medan den pågår.",
 		"imageAlt": "HawkLabs byggare i en tröja med HawkLabs logotyp"
 	},
 	"community": {
 		"eyebrow": "Följ med när vi bygger",
 		"title": "Följ HawkLabs resa",
-		"copy": "Få först veta om produktlanseringar, ärliga lägesuppdateringar och nya experiment från labbet.",
+		"copy": "Få sporadiska uppdateringar om produktlanseringar, ärliga framsteg och vad vi lär oss längs vägen.",
+		"formLabel": "Formulär för nyhetsbrevsprenumeration",
+		"nameLabel": "Namn",
+		"emailLabel": "E-postadress",
+		"consent": "Jag samtycker till att få uppdateringar och kommunikation från HawkLabs Nordic.",
 		"button": "Gå med i gemenskapen",
-		"note": "Knappen öppnar ett mejl till labbet så att du kan ta kontakt direkt.",
-		"emailHref": "mailto:info@jobhawk.se?subject=F%C3%B6lj%20HawkLabs%20resa"
+		"unavailable": "Nyhetsbrevsregistreringen förbereds. Dina uppgifter skickas inte ännu.",
+		"privacyNote": "Dina uppgifter används bara för uppdateringar du har samtyckt till. Läs vår",
+		"privacyLink": "integritetspolicy"
+	},
+	"contact": {
+		"eyebrow": "Hör av dig",
+		"name": "Sami Nylander",
+		"role": "Grundare, HawkLabs Nordic",
+		"location": "Norrköping, Sverige"
 	},
 	"footer": {
 		"brand": "Vi bygger sådant som gör nytta.",
@@ -141,6 +149,9 @@
 		"audience4": "För människor i vardagen.",
 		"built": "Byggt i Sverige.",
 		"curiosity": "Byggt med nyfikenhet.",
-		"help": "Byggt för att hjälpa."
+		"help": "Byggt för att hjälpa.",
+		"linksLabel": "Sidfotslänkar",
+		"privacy": "Integritetspolicy",
+		"contact": "Kontakt"
 	}
 }

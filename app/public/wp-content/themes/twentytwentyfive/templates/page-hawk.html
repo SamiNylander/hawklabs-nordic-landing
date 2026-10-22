@@ -246,9 +246,11 @@
 			display: inline-flex;
 			font-size: 13px;
 			font-weight: 800;
+			font-family: inherit;
 			gap: 10px;
 			justify-content: center;
 			padding: 13px 19px;
+			cursor: pointer;
 			transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 		}
 
@@ -468,6 +470,24 @@
 			transition: border-color 180ms ease, transform 180ms ease;
 		}
 
+		.hawk-lab-card:hover,
+		.hawk-lab-card:focus-within {
+			border-color: rgba(0, 229, 255, 0.42);
+			transform: translateY(-4px);
+		}
+
+		.hawk-product-card-link {
+			border-radius: inherit;
+			inset: 0;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.hawk-product-card-link:focus-visible {
+			outline: 2px solid var(--hawk-blue);
+			outline-offset: 4px;
+		}
+
 		.hawk-lab-card:not(.hawk-product-showcase) {
 			margin: 0 auto;
 			max-width: 620px;
@@ -533,6 +553,10 @@
 			position: relative;
 			border-radius: 12px;
 			width: 100%;
+		}
+
+		.hawk-lab-card > .hawk-product-preview {
+			z-index: 2;
 		}
 
 		.hawk-lab-card > .hawk-product-preview {
@@ -870,8 +894,26 @@
 				font-size: 11px;
 			}
 
+			.hawk-contact {
+				align-items: flex-start;
+				grid-template-columns: 1fr;
+			}
+
+			.hawk-footer {
+				grid-template-columns: 1fr;
+			}
+
 			.hawk-built-in {
 				margin: 4px 0 0;
+			}
+
+			.hawk-footer-built,
+			.hawk-footer-links {
+				text-align: left;
+			}
+
+			.hawk-form-fields {
+				grid-template-columns: 1fr;
 			}
 		}
 
@@ -1362,45 +1404,6 @@
 			margin: 0;
 		}
 
-		.hawk-future-section {
-			background: linear-gradient(180deg, rgba(12, 18, 31, 0.36), rgba(5, 8, 17, 0));
-		}
-
-		.hawk-future-intro {
-			color: var(--hawk-muted);
-			font-size: 16px;
-			margin: -22px 0 32px;
-			max-width: 620px;
-		}
-
-		.hawk-future-grid {
-			display: grid;
-			gap: 14px;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
-
-		.hawk-future-card {
-			background: rgba(11, 17, 32, 0.65);
-			border: 1px solid var(--hawk-line);
-			border-radius: 14px;
-			padding: 22px 24px;
-		}
-
-		.hawk-future-card span {
-			color: var(--hawk-blue);
-			display: block;
-			font-size: 10px;
-			font-weight: 750;
-			letter-spacing: 0.1em;
-			margin-bottom: 10px;
-			text-transform: uppercase;
-		}
-
-		.hawk-future-card h3 {
-			font-size: 20px;
-			margin: 0;
-		}
-
 		.hawk-founder {
 			align-items: center;
 			display: grid;
@@ -1493,11 +1496,107 @@
 			margin-top: 14px;
 		}
 
+		.hawk-community-form {
+			display: grid;
+			gap: 18px;
+			margin: 32px auto 0;
+			max-width: 620px;
+			text-align: left;
+		}
+
+		.hawk-form-fields {
+			display: grid;
+			gap: 16px;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.hawk-form-field label {
+			color: var(--hawk-white);
+			display: block;
+			font-size: 13px;
+			font-weight: 650;
+			margin-bottom: 7px;
+		}
+
+		.hawk-form-field input {
+			background: rgba(5, 8, 17, 0.72);
+			border: 1px solid var(--hawk-line);
+			border-radius: 8px;
+			color: var(--hawk-white);
+			font: inherit;
+			min-height: 48px;
+			padding: 10px 13px;
+			width: 100%;
+		}
+
+		.hawk-form-field input:focus-visible,
+		.hawk-consent input:focus-visible {
+			outline: 2px solid var(--hawk-blue);
+			outline-offset: 3px;
+		}
+
+		.hawk-consent {
+			align-items: flex-start;
+			color: var(--hawk-muted);
+			display: flex;
+			font-size: 13px;
+			gap: 10px;
+			line-height: 1.6;
+		}
+
+		.hawk-consent input {
+			accent-color: var(--hawk-blue);
+			flex: 0 0 auto;
+			height: 18px;
+			margin: 2px 0 0;
+			width: 18px;
+		}
+
+		.hawk-community-form button[disabled] {
+			cursor: not-allowed;
+			opacity: 0.65;
+		}
+
+		.hawk-form-status {
+			color: var(--hawk-muted);
+			font-size: 13px;
+			margin: 0;
+		}
+
+		.hawk-contact {
+			align-items: center;
+			display: grid;
+			gap: 30px;
+			grid-template-columns: minmax(0, 1fr) auto;
+			padding: 18px 0 64px;
+		}
+
+		.hawk-contact h2 {
+			font-size: clamp(28px, 3.5vw, 42px);
+			letter-spacing: -0.045em;
+			margin: 0 0 8px;
+		}
+
+		.hawk-contact p {
+			color: var(--hawk-muted);
+			margin: 0;
+		}
+
+		.hawk-contact-details {
+			display: grid;
+			gap: 8px;
+			font-size: 14px;
+		}
+
+		.hawk-contact-details a {
+			color: var(--hawk-blue);
+		}
+
 		.hawk-footer {
 			align-items: start;
 			display: grid;
 			gap: 30px;
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr auto auto;
 			padding: 32px 0 44px;
 			text-align: left;
 		}
@@ -1528,6 +1627,23 @@
 		.hawk-footer-built strong {
 			color: var(--hawk-white);
 			font-weight: 600;
+		}
+
+		.hawk-footer-links {
+			display: grid;
+			gap: 10px;
+			text-align: right;
+		}
+
+		.hawk-footer-links a {
+			color: var(--hawk-blue);
+			font-size: 13px;
+		}
+
+		.hawk-footer-links a:focus-visible,
+		.hawk-contact-details a:focus-visible {
+			outline: 2px solid var(--hawk-blue);
+			outline-offset: 4px;
 		}
 
 		@media (min-width: 1920px) {
@@ -1652,10 +1768,6 @@
 
 			.hawk-philosophy-grid {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
-			}
-
-			.hawk-future-grid {
-				grid-template-columns: minmax(0, 1fr);
 			}
 
 			.hawk-founder-mark {
@@ -1790,6 +1902,7 @@
 				</div>
 				<div class="hawk-lab-grid">
 					<article class="hawk-lab-card" id="JobHawk">
+						<a class="hawk-product-card-link" href="https://jobhawk.se" target="_blank" rel="noopener noreferrer" aria-label="Visit JobHawk" data-i18n-aria-label="products.jobhawk.linkLabel"></a>
 						<span class="hawk-product-status hawk-product-status-live" data-i18n="products.jobhawk.status">Launching</span>
 						<div class="hawk-product-icon" aria-hidden="true">J</div>
 						<h3 data-i18n="products.jobhawk.name">JobHawk</h3>
@@ -1803,6 +1916,7 @@
 					</article>
 
 					<article class="hawk-lab-card" id="spothawk">
+						<a class="hawk-product-card-link" href="#community" aria-label="Get updates about SpotHawk" data-i18n-aria-label="products.spothawk.linkLabel"></a>
 						<span class="hawk-product-status" data-i18n="products.spothawk.status">In Development</span>
 						<div class="hawk-product-icon" aria-hidden="true">S</div>
 						<h3 data-i18n="products.spothawk.name">SpotHawk</h3>
@@ -1816,6 +1930,7 @@
 					</article>
 
 					<article class="hawk-lab-card" id="badgehawk">
+						<a class="hawk-product-card-link" href="#community" aria-label="Get updates about BadgeHawk" data-i18n-aria-label="products.badgehawk.linkLabel"></a>
 						<span class="hawk-product-status hawk-product-status-coming" data-i18n="products.badgehawk.status">Beta</span>
 						<div class="hawk-product-icon" aria-hidden="true">B</div>
 						<h3 data-i18n="products.badgehawk.name">BadgeHawk</h3>
@@ -1829,6 +1944,7 @@
 					</article>
 
 					<article class="hawk-lab-card" id="myfluffy">
+						<a class="hawk-product-card-link" href="#community" aria-label="Get updates about MyFluffy" data-i18n-aria-label="products.myfluffy.linkLabel"></a>
 						<span class="hawk-product-status" data-i18n="products.myfluffy.status">Prototype</span>
 						<div class="hawk-product-icon" aria-hidden="true">M</div>
 						<h3 data-i18n="products.myfluffy.name">MyFluffy</h3>
@@ -1875,40 +1991,18 @@
 				</div>
 			</section>
 
-			<section class="hawk-section hawk-future-section" id="future" aria-labelledby="future-title">
-				<div class="hawk-section-heading">
-					<div>
-						<p class="hawk-eyebrow" data-i18n="future.eyebrow">Early ideas, open possibilities</p>
-						<h2 id="future-title" data-i18n="future.title">What’s Cooking in the Lab</h2>
-					</div>
-				</div>
-				<p class="hawk-future-intro" data-i18n="future.intro">Some ideas are still just questions on the whiteboard. These are future concepts, not products in development — we’re curious where they might lead.</p>
-				<div class="hawk-future-grid">
-					<article class="hawk-future-card">
-						<span data-i18n="future.concept">Future concept</span>
-						<h3 data-i18n="future.homehawk">HomeHawk</h3>
-					</article>
-					<article class="hawk-future-card">
-						<span data-i18n="future.concept">Future concept</span>
-						<h3 data-i18n="future.autohawk">AutoHawk</h3>
-					</article>
-					<article class="hawk-future-card">
-						<span data-i18n="future.concept">Future concept</span>
-						<h3 data-i18n="future.dealhawk">DealHawk</h3>
-					</article>
-				</div>
-			</section>
-
 			<section class="hawk-section" id="founder" aria-labelledby="founder-title">
 				<div class="hawk-founder">
 					<div class="hawk-founder-mark">
 						<img class="hawk-founder-image" src="/wp-content/uploads/2026/10/meetthebuilder.jfif" alt="HawkLabs builder wearing a shirt with the HawkLabs logo" data-i18n-alt="founder.imageAlt" loading="lazy">
 					</div>
 					<div class="hawk-founder-copy">
-						<p class="hawk-eyebrow" data-i18n="founder.eyebrow">One person, plenty of questions</p>
+						<p class="hawk-eyebrow" data-i18n="founder.eyebrow">A little about the person behind HawkLabs</p>
 						<h2 id="founder-title" data-i18n="founder.title">Meet The Builder</h2>
-						<p data-i18n="founder.paragraph1">I’m a Swedish builder, football coach and technology enthusiast. I’ve always believed everyday problems deserve better solutions — and that the best way to find them is to stay curious, make something real and listen to the people it’s meant to help.</p>
-						<p data-i18n="founder.paragraph2">HawkLabs is where I bring those questions to life, one experiment at a time. Some ideas will change along the way. That’s part of building with purpose.</p>
+						<p data-i18n="founder.greeting">Hi, I'm Sami.</p>
+						<p data-i18n="founder.paragraph1">I'm a technology enthusiast, football coach and lifelong problem solver from Sweden.</p>
+						<p data-i18n="founder.paragraph2">HawkLabs Nordic started with a simple belief: technology should make everyday life easier, not more complicated.</p>
+						<p data-i18n="founder.paragraph3">Whether it is helping someone find a job, care for a pet, create something meaningful or solve everyday frustrations, my goal is to build products that help real people.</p>
 						<p class="hawk-founder-signoff" data-i18n="founder.signoff">Built in Sweden. Shared as the journey unfolds.</p>
 					</div>
 				</div>
@@ -1917,9 +2011,38 @@
 			<section class="hawk-community" id="community" aria-labelledby="community-title">
 				<p class="hawk-eyebrow" data-i18n="community.eyebrow">Come along for the build</p>
 				<h2 id="community-title" data-i18n="community.title">Follow The HawkLabs Journey</h2>
-				<p data-i18n="community.copy">Be first to hear about product launches, honest progress updates and experiments coming out of the lab.</p>
-				<a class="hawk-button" href="mailto:info@jobhawk.se?subject=Follow%20the%20HawkLabs%20journey" data-i18n-href="community.emailHref"><span data-i18n="community.button">Join The Community</span> <span aria-hidden="true">→</span></a>
-				<span class="hawk-community-note" data-i18n="community.note">This opens an email to the lab so you can get in touch directly.</span>
+				<p data-i18n="community.copy">Get occasional updates about product launches, honest progress and what we are learning along the way.</p>
+				<form class="hawk-community-form" aria-label="Newsletter signup" data-i18n-aria-label="community.formLabel">
+					<div class="hawk-form-fields">
+						<div class="hawk-form-field">
+							<label for="newsletter-name" data-i18n="community.nameLabel">Name</label>
+							<input id="newsletter-name" name="name" type="text" autocomplete="name" required>
+						</div>
+						<div class="hawk-form-field">
+							<label for="newsletter-email" data-i18n="community.emailLabel">Email address</label>
+							<input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+						</div>
+					</div>
+					<label class="hawk-consent" for="newsletter-consent">
+						<input id="newsletter-consent" name="consent" type="checkbox" required>
+						<span data-i18n="community.consent">I consent to receiving updates and communications from HawkLabs Nordic.</span>
+					</label>
+					<button class="hawk-button" type="submit" disabled><span data-i18n="community.button">Join The Community</span> <span aria-hidden="true">→</span></button>
+					<p class="hawk-form-status" role="status" data-i18n="community.unavailable">Newsletter signup is being prepared. Your information will not be submitted yet.</p>
+					<p class="hawk-community-note"><span data-i18n="community.privacyNote">Your details will only be used for updates you have agreed to receive. See our</span> <a href="/privacy-policy.html" data-i18n="community.privacyLink">Privacy Policy</a>.</p>
+				</form>
+			</section>
+
+			<section class="hawk-contact" id="contact" aria-labelledby="contact-title">
+				<div>
+					<p class="hawk-eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
+					<h2 id="contact-title" data-i18n="contact.name">Sami Nylander</h2>
+					<p data-i18n="contact.role">Founder, HawkLabs Nordic</p>
+				</div>
+				<div class="hawk-contact-details">
+					<a href="mailto:hello@hawklabs.se">hello@hawklabs.se</a>
+					<span data-i18n="contact.location">Norrköping, Sweden</span>
+				</div>
 			</section>
 
 			<footer class="hawk-footer">
@@ -1928,6 +2051,10 @@
 					<p class="hawk-footer-message"><span data-i18n="footer.audience1">For job seekers.</span><br><span data-i18n="footer.audience2">For gamers.</span><br><span data-i18n="footer.audience3">For pet owners.</span><br><span data-i18n="footer.audience4">For everyday people.</span></p>
 				</div>
 				<p class="hawk-footer-built"><strong data-i18n="footer.built">Built in Sweden.</strong><br><span data-i18n="footer.curiosity">Built with curiosity.</span><br><span data-i18n="footer.help">Built to help.</span></p>
+				<nav class="hawk-footer-links" aria-label="Footer links" data-i18n-aria-label="footer.linksLabel">
+					<a href="/privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#contact" data-i18n="footer.contact">Contact</a>
+				</nav>
 			</footer>
 		</div>
 	</main>

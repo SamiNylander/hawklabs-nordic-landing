@@ -49,6 +49,7 @@
 		"jobhawk": {
 			"name": "JobHawk",
 			"status": "Launching",
+			"linkLabel": "Visit JobHawk",
 			"tagline": "A steadier way through the job search.",
 			"description": "An AI-powered career coach to help people improve their CVs, write applications and navigate the search for their next opportunity.",
 			"problem": "Finding work can be confusing, lonely and hard to know how to approach.",
@@ -58,6 +59,7 @@
 		"spothawk": {
 			"name": "SpotHawk",
 			"status": "In Development",
+			"linkLabel": "Get updates about SpotHawk",
 			"tagline": "Make more of the chargers already out there.",
 			"description": "Peer-to-peer EV charger sharing that helps drivers find a place to charge and lets homeowners share their private charger.",
 			"problem": "Convenient charging can be difficult to find when you’re away from home.",
@@ -67,6 +69,7 @@
 		"badgehawk": {
 			"name": "BadgeHawk",
 			"status": "Beta",
+			"linkLabel": "Get updates about BadgeHawk",
 			"tagline": "Make your team identity unmistakably yours.",
 			"description": "A creative toolkit for generating professional AI-made emblems, logos and gaming identities for teams and communities.",
 			"problem": "Small teams deserve identity design that feels as considered as the people behind it.",
@@ -76,6 +79,7 @@
 		"myfluffy": {
 			"name": "MyFluffy",
 			"status": "Prototype",
+			"linkLabel": "Get updates about MyFluffy",
 			"tagline": "A little more peace of mind for pet people.",
 			"description": "Connected pet technology exploring how thoughtful tracking and health insights can support the bond between people and their animals.",
 			"problem": "It’s hard to care for what you can’t easily understand or keep track of.",
@@ -108,30 +112,34 @@
 			"copy": "Launch. Learn. Improve. Keep listening as we go."
 		}
 	},
-	"future": {
-		"eyebrow": "Early ideas, open possibilities",
-		"title": "What’s Cooking in the Lab",
-		"intro": "Some ideas are still just questions on the whiteboard. These are future concepts, not products in development — we’re curious where they might lead.",
-		"concept": "Future concept",
-		"homehawk": "HomeHawk",
-		"autohawk": "AutoHawk",
-		"dealhawk": "DealHawk"
-	},
 	"founder": {
-		"eyebrow": "One person, plenty of questions",
+		"eyebrow": "A little about the person behind HawkLabs",
 		"title": "Meet The Builder",
-		"paragraph1": "I’m a Swedish builder, football coach and technology enthusiast. I’ve always believed everyday problems deserve better solutions — and that the best way to find them is to stay curious, make something real and listen to the people it’s meant to help.",
-		"paragraph2": "HawkLabs is where I bring those questions to life, one experiment at a time. Some ideas will change along the way. That’s part of building with purpose.",
+		"greeting": "Hi, I'm Sami.",
+		"paragraph1": "I'm a technology enthusiast, football coach and lifelong problem solver from Sweden.",
+		"paragraph2": "HawkLabs Nordic started with a simple belief: technology should make everyday life easier, not more complicated.",
+		"paragraph3": "Whether it is helping someone find a job, care for a pet, create something meaningful or solve everyday frustrations, my goal is to build products that help real people.",
 		"signoff": "Built in Sweden. Shared as the journey unfolds.",
 		"imageAlt": "HawkLabs builder wearing a shirt with the HawkLabs logo"
 	},
 	"community": {
 		"eyebrow": "Come along for the build",
 		"title": "Follow The HawkLabs Journey",
-		"copy": "Be first to hear about product launches, honest progress updates and experiments coming out of the lab.",
+		"copy": "Get occasional updates about product launches, honest progress and what we are learning along the way.",
+		"formLabel": "Newsletter signup form",
+		"nameLabel": "Name",
+		"emailLabel": "Email address",
+		"consent": "I consent to receiving updates and communications from HawkLabs Nordic.",
 		"button": "Join The Community",
-		"note": "This opens an email to the lab so you can get in touch directly.",
-		"emailHref": "mailto:info@jobhawk.se?subject=Follow%20the%20HawkLabs%20journey"
+		"unavailable": "Newsletter signup is being prepared. Your information will not be submitted yet.",
+		"privacyNote": "Your details will only be used for updates you have agreed to receive. See our",
+		"privacyLink": "Privacy Policy"
+	},
+	"contact": {
+		"eyebrow": "Get in touch",
+		"name": "Sami Nylander",
+		"role": "Founder, HawkLabs Nordic",
+		"location": "Norrköping, Sweden"
 	},
 	"footer": {
 		"brand": "We build useful things.",
@@ -141,6 +149,9 @@
 		"audience4": "For everyday people.",
 		"built": "Built in Sweden.",
 		"curiosity": "Built with curiosity.",
-		"help": "Built to help."
+		"help": "Built to help.",
+		"linksLabel": "Footer links",
+		"privacy": "Privacy Policy",
+		"contact": "Contact"
 	}
 }
