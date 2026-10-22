@@ -2053,7 +2053,7 @@
 					<p data-i18n="contact.role">Founder, HawkLabs Nordic</p>
 				</div>
 				<div class="hawk-contact-details">
-					<a href="mailto:hello@hawklabs.se">hello@hawklabs.se</a>
+					<a href="mailto:info@hawklabsnordic.se">info@hawklabsnordic.se</a>
 					<span data-i18n="contact.location">Norrköping, Sweden</span>
 				</div>
 			</section>
@@ -2090,12 +2090,12 @@
 				en: {
 					sending: 'Submitting your signup…',
 					success: 'Thanks for joining! You are on the list.',
-					error: 'We could not submit your signup. Please try again or contact us at hello@hawklabs.se.'
+					error: 'We could not submit your signup. Please try again or contact us at info@hawklabsnordic.se.'
 				},
 				sv: {
 					sending: 'Skickar din anmälan…',
 					success: 'Tack för din anmälan! Du finns nu med på listan.',
-					error: 'Det gick inte att skicka din anmälan. Försök igen eller kontakta hello@hawklabs.se.'
+					error: 'Det gick inte att skicka din anmälan. Försök igen eller kontakta info@hawklabsnordic.se.'
 				}
 			};
 			let activeLanguage = 'en';
@@ -2266,7 +2266,7 @@
 				newsletterStatus.textContent = newsletterMessages[activeLanguage].sending;
 
 				try {
-					const response = await fetch('/wp-json/hawklabs/v1/newsletter', {
+					const response = await fetch('/api/subscribe', {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
