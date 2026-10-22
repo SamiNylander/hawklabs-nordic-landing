@@ -1557,6 +1557,15 @@
 			opacity: 0.65;
 		}
 
+		.hawk-form-honeypot {
+			height: 1px;
+			left: -10000px;
+			overflow: hidden;
+			position: absolute;
+			top: auto;
+			width: 1px;
+		}
+
 		.hawk-form-status {
 			color: var(--hawk-muted);
 			font-size: 13px;
@@ -2027,8 +2036,12 @@
 						<input id="newsletter-consent" name="consent" type="checkbox" required>
 						<span data-i18n="community.consent">I consent to receiving updates and communications from HawkLabs Nordic.</span>
 					</label>
-					<button class="hawk-button" type="submit" disabled><span data-i18n="community.button">Join The Community</span> <span aria-hidden="true">→</span></button>
-					<p class="hawk-form-status" role="status" data-i18n="community.unavailable">Newsletter signup is being prepared. Your information will not be submitted yet.</p>
+					<div class="hawk-form-honeypot" aria-hidden="true">
+						<label for="newsletter-website">Leave this field empty</label>
+						<input id="newsletter-website" name="website" type="text" tabindex="-1" autocomplete="off">
+					</div>
+					<button class="hawk-button" type="submit"><span data-i18n="community.button">Join The Community</span> <span aria-hidden="true">→</span></button>
+					<p class="hawk-form-status" role="status" aria-live="polite" hidden></p>
 					<p class="hawk-community-note"><span data-i18n="community.privacyNote">Your details will only be used for updates you have agreed to receive. See our</span> <a href="/privacy-policy.html" data-i18n="community.privacyLink">Privacy Policy</a>.</p>
 				</form>
 			</section>
@@ -2070,6 +2083,21 @@
 			const description = document.querySelector('meta[name="description"]');
 			const socialTitle = document.querySelector('meta[property="og:title"]');
 			const socialDescription = document.querySelector('meta[property="og:description"]');
+			const newsletterForm = document.querySelector('.hawk-community-form');
+			const newsletterSubmitButton = newsletterForm.querySelector('button[type="submit"]');
+			const newsletterStatus = newsletterForm.querySelector('.hawk-form-status');
+			const newsletterMessages = {
+				en: {
+					sending: 'Submitting your signup…',
+					success: 'Thanks for joining! You are on the list.',
+					error: 'We could not submit your signup. Please try again or contact us at hello@hawklabs.se.'
+				},
+				sv: {
+					sending: 'Skickar din anmälan…',
+					success: 'Tack för din anmälan! Du finns nu med på listan.',
+					error: 'Det gick inte att skicka din anmälan. Försök igen eller kontakta hello@hawklabs.se.'
+				}
+			};
 			let activeLanguage = 'en';
 			let requestedLanguage = 'en';
 			let requestController;
@@ -2225,6 +2253,47 @@
 					}
 					loadLanguage(language, true);
 				});
+			});
+
+			newsletterForm.addEventListener('submit', async function (event) {
+				event.preventDefault();
+				if (!newsletterForm.reportValidity()) {
+					return;
+				}
+
+				newsletterSubmitButton.disabled = true;
+				newsletterStatus.hidden = false;
+				newsletterStatus.textContent = newsletterMessages[activeLanguage].sending;
+
+				try {
+					const response = await fetch('/wp-json/hawklabs/v1/newsletter', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+							'Accept': 'application/json'
+						},
+						body: JSON.stringify({
+							name: newsletterForm.elements.namedItem('name').value.trim(),
+							email: newsletterForm.elements.namedItem('email').value.trim(),
+							consent: newsletterForm.elements.namedItem('consent').checked,
+							website: newsletterForm.elements.namedItem('website').value
+						})
+					});
+
+					if (!response.ok) {
+						console.error('Newsletter signup failed with status ' + response.status + '.');
+						newsletterStatus.textContent = newsletterMessages[activeLanguage].error;
+						return;
+					}
+
+					newsletterForm.reset();
+					newsletterStatus.textContent = newsletterMessages[activeLanguage].success;
+				} catch (error) {
+					console.error('Could not submit the newsletter signup.', error);
+					newsletterStatus.textContent = newsletterMessages[activeLanguage].error;
+				} finally {
+					newsletterSubmitButton.disabled = false;
+				}
 			});
 
 			await loadLanguage(readSavedLanguage() || readUrlLanguage() || detectBrowserLanguage());
