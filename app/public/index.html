@@ -1838,19 +1838,26 @@
 			}
 		}
 		@media (max-width: 900px) {
-    /* Centrera alla sektionsrubriker och text på mobil */
+    /* Tvinga bort fasta vänstermarginaler som kan blockera */
+    .hawk-section, 
     .hawk-section-heading, 
     .hawk-story-grid, 
-    .hawk-lab-grid {
+    .hawk-lab-grid,
+    .hawk-hero {
         text-align: center !important;
         justify-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
-    /* Stapla korten (JobHawk, SpotHawk m.fl.) snyggt i mitten */
+    /* Stapla och centrera produktkorten */
     .hawk-lab-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        width: 100% !important;
+    }
+}
     }
 }
 	</style>
