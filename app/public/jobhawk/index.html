@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobHawk – Din personliga AI-karriärcoach</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0B0F17',
+                        cardbg: '#161D2A',
+                        accent: '#00E5FF',
+                        accenthover: '#00B8D4'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased pb-24">
+
+    <!-- HEADER -->
+    <header class="w-full border-b border-gray-800 py-4 px-6 md:px-12 flex justify-between items-center bg-darkbg/80 backdrop-blur sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <span class="font-bold tracking-wider text-lg text-white">HAWKLABS / <span class="text-accent">NORDIC</span></span>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-sm text-gray-300">
+            <a href="#funktioner" class="hover:text-accent transition">Funktioner</a>
+            <a href="#hur-det-funkar" class="hover:text-accent transition">Så funkar det</a>
+            <a href="#faq" class="hover:text-accent transition">Vanliga frågor</a>
+        </nav>
+        <a href="https://jobhawk.se" class="bg-accent text-darkbg font-semibold px-4 py-2 rounded-xl text-sm hover:bg-accenthover transition shadow-lg shadow-accent/20">
+            Logga in i appen
+        </a>
+    </header>
+
+    <!-- HERO SEKTION -->
+    <section class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
+        <div class="inline-block bg-accent/10 border border-accent/30 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
+            DIN PERSONLIGA AI-KARRIÄRCOACH
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            Sänk tiden, kapa kostnaden och höj <span class="text-accent">motivationen</span> i ditt jobbsökande.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            JobHawk skräddarsyr ditt CV och personliga brev efter varje jobbannons med ett klick. Sluta lägga timmar på manuellt skrivande.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="https://jobhawk.se" class="w-full sm:w-auto bg-accent text-darkbg font-bold px-8 py-4 rounded-xl text-lg hover:bg-accenthover transition shadow-xl shadow-accent/25">
+                Börja gratis nu
+            </a>
+            <a href="#hur-det-funkar" class="w-full sm:w-auto bg-cardbg border border-gray-700 font-medium px-6 py-4 rounded-xl text-lg hover:border-gray-500 transition">
+                Se hur det fungerar
+            </a>
+        </div>
+    </section>
+
+    <!-- VIDEO / VISUELL SEKTION (Dina 2-sekunders klipp med förklarande text) -->
+    <section id="hur-det-funkar" class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Så enkelt skickar du iväg vassa ansökningar</h2>
+            <p class="text-gray-400">Byggt för att spara tid och ge ett professionellt intryck direkt.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <!-- Steg 1 Video/GIF -->
+            <div class="bg-cardbg border border-gray-800 rounded-2xl p-4 shadow-xl">
+                <div class="aspect-video bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center border border-gray-800">
+                    <!-- Byt ut src mot din video-fil i mappen t.ex. 'video1.mp4' -->
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                        <source src="video1.mp4" type="video/mp4">
+                        Din webbläsare stöder inte videotaggen.
+                    </video>
+                </div>
+                <h3 class="font-bold text-lg mt-4 mb-2 text-white">1. Ladda upp eller klistra in ditt CV</h3>
+                <p class="text-gray-400 text-sm">Med dra-och-släpp eller ett enkelt klick har JobHawk koll på din grundprofil och dina erfarenheter.</p>
+            </div>
+
+            <!-- Steg 2 Video/GIF -->
+            <div class="bg-cardbg border border-gray-800 rounded-2xl p-4 shadow-xl">
+                <div class="aspect-video bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center border border-gray-800">
+                    <!-- Byt ut src mot din video-fil i mappen t.ex. 'video2.mp4' -->
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                        <source src="video2.mp4" type="video/mp4">
+                        Din webbläsare stöder inte videotaggen.
+                    </video>
+                </div>
+                <h3 class="font-bold text-lg mt-4 mb-2 text-white">2. Generera skräddarsytt CV & PB</h3>
+                <p class="text-gray-400 text-sm">AI:n läser av jobbannonsen och skapar en perfekt matchad ansökan på några sekunder – färdig att exporteras.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREEMIUM VS PRO -->
+    <section class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Välj det upplägg som passar dig</h2>
+            <p class="text-gray-400">Starta helt gratis eller lås upp full kraft med våra flexibla pass.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Gratis -->
+            <div class="bg-cardbg border border-gray-800 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-full">Standard</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-2">Gratisversionen</h3>
+                    <p class="text-gray-400 text-sm mb-6">Perfekt för dig som vill komma igång direkt utan kostnad.</p>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center">✅ Skapa och skicka din första ansökan</li>
+                        <li class="flex items-center">✅ Grundläggande AI-matchning</li>
+                        <li class="flex items-center">✅ Titta på belöningsvideo för extra tidsbesparingar</li>
+                    </ul>
+                </div>
+                <a href="https://jobhawk.se" class="w-full bg-gray-800 text-white font-semibold py-3 rounded-xl text-center hover:bg-gray-700 transition">
+                    Kom igång gratis
+                </a>
+            </div>
+
+            <!-- Pro -->
+            <div class="bg-gradient-to-b from-cardbg to-gray-900 border-2 border-accent rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-accent/10">
+                <div class="absolute -top-3 right-8 bg-accent text-darkbg text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Populärast
+                </div>
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Pro Pass</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-2">3, 7 eller 30 dagar</h3>
+                    <p class="text-gray-400 text-sm mb-6">Engångsköp utan dolda prenumerationsfällor när du söker aktivt.</p>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center">🚀 100 % reklamfritt gränssnitt</li>
+                        <li class="flex items-center">📄 Obegränsade rena PDF-nedladdningar (utan vattenstämpel)</li>
+                        <li class="flex items-center">🤖 Personlig AI-karriärcoach (20 meddelanden/dag)</li>
+                        <li class="flex items-center">📊 Ansökningspipeline & smarta uppföljningar</li>
+                    </ul>
+                </div>
+                <a href="https://jobhawk.se" class="w-full bg-accent text-darkbg font-bold py-3 rounded-xl text-center hover:bg-accenthover transition shadow-lg shadow-accent/20">
+                    Skaffa Pro Pass
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERAKTIV FAQ -->
+    <section id="faq" class="max-w-3xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Vanliga frågor och svar</h2>
+            <p class="text-gray-400">Allt du funderar på kring JobHawk, säkerhet och abonnemang.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Fråga 1 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Varför ska jag använda JobHawk när ChatGPT är gratis?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Med ChatGPT måste du själv klistra in jobbannonser, prompta rätt och formatera om texten varje gång. JobHawk läser av annonsen automatiskt och skräddarsyr ditt CV och personliga brev med ett klick – färdigformaterat och redo att skickas på sekunder.
+                </p>
+            </details>
+
+            <!-- Fråga 2 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Hur kommer jag igång?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Skapa ett konto och svara på tre snabba frågor om dina önskemål (du kan ändra dem när som helst). Ladda upp eller klistra in ditt grund-CV så är du redo att börja svepa och söka jobb direkt.
+                </p>
+            </details>
+
+            <!-- Fråga 3 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Vad är den största fördelen jämfört med att söka manuellt?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Extrem tidsbesparing och struktur. Att hålla koll på 5+ parallella ansökningar blir snabbt rörigt. Med vår inbyggda pipeline håller du koll på varje steg, från skickad ansökan till intervju.
+                </p>
+            </details>
+
+            <!-- Fråga 4 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Garanterar JobHawk att jag får ett jobb?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Nej, ingen kan garantera ett jobb. Men JobHawk garanterar att du ger ett knivskarpt, professionellt intryck och sparar timmar av stress – vilket ökar dina chanser avsevärt.
+                </p>
+            </details>
+
+            <!-- Fråga 5 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Är JobHawk helt gratis att använda?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Ja! Vi har en Freemium-modell där du får allt som behövs för att skicka dina första ansökningar helt gratis. Vill du låsa upp fler snabbfunktioner utan att betala kan du enkelt titta på en kort belöningsvideo.
+                </p>
+            </details>
+
+            <!-- Fråga 6 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Vad kostar Premium / Pro?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Vi erbjuder flexibla Pro-pass för 3, 7 eller 30 dagar utan krångliga bindningstider. Du köper bara tillgång när du aktivt söker jobb.
+                </p>
+            </details>
+
+            <!-- Fråga 7 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Vad ingår i Pro-versionen?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    100 % reklamfritt gränssnitt, obegränsade rena PDF-nedladdningar utan vattenstämpel, full textformatering, tillgång till din personliga AI-karriärcoach (upp till 20 meddelanden/dag), obegränsade jobbbevakningar och smarta påminnelser.
+                </p>
+            </details>
+
+            <!-- Fråga 8 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Vad är "Dagens Skrap"?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Det är vår dagliga bonus! Varje dag får du chansen att skrapa fram priser direkt i appen – till exempel gratis dagar med Pro-tillgång.
+                </p>
+            </details>
+
+            <!-- Fråga 9 -->
+            <details class="bg-cardbg border border-gray-800 rounded-xl p-6 group cursor-pointer">
+                <summary class="font-semibold flex justify-between items-center text-white">
+                    Hur hanteras mina personuppgifter och mitt CV?
+                    <span class="transition group-open:rotate-180">▼</span>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Din data är 100 % privat och säker. Vi säljer aldrig dina uppgifter till tredje part, och ditt CV används endast för att generera dina ansökningar.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- FIXED BOTTOM CTA (Sticky Bar kopplad till jobhawk.se) -->
+    <div class="fixed bottom-0 left-0 right-0 bg-cardbg/95 backdrop-blur border-t border-gray-800 p-4 shadow-2xl z-50 flex justify-between items-center px-6 md:px-12 max-w-4xl mx-auto md:rounded-t-2xl">
+        <div class="hidden sm:block">
+            <p class="font-bold text-white text-sm">Redo att förenkla ditt jobbsökande?</p>
+            <p class="text-gray-400 text-xs">Skapa ditt konto på några sekunder.</p>
+        </div>
+        <a href="https://jobhawk.se" class="w-full sm:w-auto bg-accent text-darkbg font-bold px-6 py-3 rounded-xl text-sm hover:bg-accenthover transition shadow-lg shadow-accent/20 text-center">
+            Börja gratis på JobHawk.se
+        </a>
+    </div>
+
+</body>
+</html>
