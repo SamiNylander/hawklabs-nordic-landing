@@ -53,7 +53,10 @@
     <!-- NAVIGATION -->
     <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
         <div class="flex items-center gap-3">
-            <span class="font-bold tracking-wider text-lg">JOB<span class="text-accent">HAWK</span></span>
+            <a href="https://jobhawk.se" class="flex items-center gap-2 font-bold tracking-wider text-lg">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
+                JOB<span class="text-accent">HAWK</span>
+            </a>
         </div>
         <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--hawk-muted)]">
             <a href="https://hawklabsnordic.se" class="hover:text-white transition" data-i18n="nav_home">HawkLabs</a>
@@ -87,7 +90,7 @@
             </div>
         </section>
 
-        <!-- JÄMFÖRELSETABELL (ChatGPT vs JobHawk) -->
+        <!-- JÄMFÖRELSETABELL -->
         <section id="comparison" class="max-w-4xl mx-auto px-6 py-12">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="comp_heading">ChatGPT vs JobHawk</h2>
@@ -181,16 +184,13 @@
                             <li class="flex items-center gap-2">✓ <span data-i18n="free_f3">Titta på belöningsvideo för extra tidsbesparingar</span></li>
                         </ul>
                     </div>
-                    <a href="#" class="block w-full border border-[var(--hawk-line)] text-center font-bold py-3 rounded-xl hover:bg-[var(--hawk-surface-raised)] transition text-sm" data-i18n="free_btn">
+                    <a href="https://jobhawk.se" class="block w-full border border-[var(--hawk-line)] text-center font-bold py-3 rounded-xl hover:bg-[var(--hawk-surface-raised)] transition text-sm" data-i18n="free_btn">
                         Kom igång gratis
                     </a>
                 </div>
 
-                <!-- Pro Pass -->
+                <!-- Pro Pass (Med Populärast på 7 dagar) -->
                 <div class="bg-gradient-to-b from-[var(--hawk-surface)] to-[#08101e] border-2 border-accent rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-accent/10">
-                    <div class="absolute -top-3 right-8 bg-accent text-darkbg text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="pro_pop">
-                        Populärast
-                    </div>
                     <div>
                         <span class="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full" data-i18n="pro_badge">Pro Pass</span>
                         <h3 class="text-2xl font-bold mt-4 mb-2" data-i18n="pro_title">3, 7 eller 30 dagar</h3>
@@ -203,17 +203,28 @@
                         </ul>
                     </div>
 
-                    <!-- Stripe Prisknappar -->
+                    <!-- Stripe Prisknappar (Populärast på 7-dagars) -->
                     <div class="space-y-2.5 pt-2 border-t border-[var(--hawk-line)]">
                         <div class="text-xs text-center text-[var(--hawk-muted)] font-medium mb-1" data-i18n="select_validity">Välj giltighetstid:</div>
-                        <a href="https://buy.stripe.com/8x28wI5hy3f72CadO7f7i02" target="_blank" class="block w-full bg-accent text-darkbg font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent-hover transition text-sm shadow-md" data-i18n="btn_3d">
-                            3 Dagar Pro — 29 kr
+                        
+                        <!-- 3 Dagar -->
+                        <a href="https://buy.stripe.com/8x28wI5hy3f72CadO7f7i02" target="_blank" class="block w-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-white font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent hover:text-darkbg transition text-sm">
+                            <span data-i18n="btn_3d">3 Dagar Pro — 29 kr</span>
                         </a>
-                        <a href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03" target="_blank" class="block w-full bg-accent text-darkbg font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent-hover transition text-sm shadow-md" data-i18n="btn_7d">
-                            7 Dagar Pro — 49 kr
-                        </a>
-                        <a href="https://buy.stripe.com/aFa14gfWceXP7WudO7f7i01" target="_blank" class="block w-full bg-accent text-darkbg font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent-hover transition text-sm shadow-md" data-i18n="btn_30d">
-                            30 Dagar Pro — 79 kr
+
+                        <!-- 7 Dagar (Populärast) -->
+                        <div class="relative">
+                            <span class="absolute -top-2.5 right-4 bg-accent text-darkbg text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow" data-i18n="pro_pop">
+                                Populärast
+                            </span>
+                            <a href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03" target="_blank" class="block w-full bg-accent text-darkbg font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent-hover transition text-sm shadow-md">
+                                <span data-i18n="btn_7d">7 Dagar Pro — 49 kr</span>
+                            </a>
+                        </div>
+
+                        <!-- 30 Dagar -->
+                        <a href="https://buy.stripe.com/aFa14gfWceXP7WudO7f7i01" target="_blank" class="block w-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-white font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent hover:text-darkbg transition text-sm">
+                            <span data-i18n="btn_30d">30 Dagar Pro — 79 kr</span>
                         </a>
                     </div>
                 </div>
@@ -221,9 +232,18 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-[var(--hawk-line)] py-8 px-6 text-center text-xs text-[var(--hawk-muted)]">
-        <p>© 2026 HawkLabs Nordic. <span data-i18n="footer_rights">Alla rättigheter förbehållna.</span></p>
+    <!-- FOOTER MED JURIDISKA LÄNKAR -->
+    <footer class="border-t border-[var(--hawk-line)] py-10 px-6 bg-[var(--hawk-surface)]/30 text-xs text-[var(--hawk-muted)]">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <p>© 2026 HawkLabs Nordic. <span data-i18n="footer_rights">Alla rättigheter förbehållna.</span></p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="about.html" class="hover:text-white transition" data-i18n="footer_about">Om oss</a>
+                <a href="villkor.html" class="hover:text-white transition" data-i18n="footer_terms">Användarvillkor</a>
+                <a href="cookies.html" class="hover:text-white transition" data-i18n="footer_cookies">Kakor</a>
+                <a href="privacy-policy.html" class="hover:text-white transition" data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="contact.html" class="hover:text-white transition" data-i18n="footer_contact">Kontakt</a>
+            </div>
+        </div>
     </footer>
 
     <!-- SPRÅKLOGIK OCH ÖVERSÄTTNINGAR -->
@@ -277,7 +297,12 @@
                 btn_3d: "3 Dagar Pro — 29 kr",
                 btn_7d: "7 Dagar Pro — 49 kr",
                 btn_30d: "30 Dagar Pro — 79 kr",
-                footer_rights: "Alla rättigheter förbehållna."
+                footer_rights: "Alla rättigheter förbehållna.",
+                footer_about: "Om oss",
+                footer_terms: "Användarvillkor",
+                footer_cookies: "Kakor",
+                footer_privacy: "Privacy Policy",
+                footer_contact: "Kontakt"
             },
             en: {
                 meta_title: "JobHawk – AI-Driven Career Platform",
@@ -310,7 +335,7 @@
                 pricing_sub: "One-time purchases with zero hidden subscription traps while actively hunting.",
                 free_badge: "Standard",
                 free_title: "Free Version",
-                free_desc: "Perfect for getting started right away at no cost.",
+                free_desc: "Perfekt för dig som vill komma igång direkt utan kostnad.",
                 free_f1: "Create and send your first application",
                 free_f2: "Basic AI matching",
                 free_f3: "Watch a reward video for extra time-savers",
@@ -327,7 +352,12 @@
                 btn_3d: "3 Days Pro — 29 kr",
                 btn_7d: "7 Days Pro — 49 kr",
                 btn_30d: "30 Days Pro — 79 kr",
-                footer_rights: "All rights reserved."
+                footer_rights: "All rights reserved.",
+                footer_about: "About Us",
+                footer_terms: "Terms of Use",
+                footer_cookies: "Cookies",
+                footer_privacy: "Privacy Policy",
+                footer_contact: "Contact"
             }
         };
 
@@ -335,7 +365,6 @@
             localStorage.setItem('jobhawk_lang', lang);
             document.documentElement.setAttribute('lang', lang);
 
-            // Byt ut all text med data-i18n
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
@@ -343,7 +372,6 @@
                 }
             });
 
-            // Uppdatera stil på språkknapparna
             const svBtn = document.getElementById('lang-sv');
             const enBtn = document.getElementById('lang-en');
 
@@ -356,7 +384,6 @@
             }
         }
 
-        // Läs av URL (?lang=en eller ?lang=sv) eller sparad inställning vid laddning
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const urlLang = urlParams.get('lang');
