@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss - HawkLabs Nordic</title>
+    <meta name="theme-color" content="#050811">
+    <title data-i18n="meta_title">Om oss – HawkLabs Nordic</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/wp-content/uploads/2026/10/cropped-logo_main-32x32.png" sizes="32x32">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hawkbg: '#050811',
+                        surface: '#0b1120',
+                        surfaceraised: '#10192b',
+                        accent: '#00e5ff',
+                        'accent-hover': '#00b8cc',
+                        darkbg: '#050811'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            color-scheme: dark;
+            --hawk-bg: #050811;
+            --hawk-surface: #0b1120;
+            --hawk-surface-raised: #10192b;
+            --hawk-blue: #00e5ff;
+            --hawk-white: #f7f8fb;
+            --hawk-muted: #94a3b8;
+            --hawk-line: rgba(177, 195, 222, 0.15);
+            --hawk-green: #55f2b1;
+        }
+        body {
+            background-color: var(--hawk-bg);
+            color: var(--hawk-white);
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between">
-    <header class="p-6 border-b border-gray-800">
-        <a href="/" class="text-xl font-bold tracking-wider text-white">HAWKLABS / NORDIC</a>
+<body class="min-h-screen flex flex-col justify-between selection:bg-accent selection:text-darkbg">
+
+    <!-- NAVIGATION MED LOGOTYP OCH FLAGGOR -->
+    <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
+        <div class="flex items-center gap-3">
+            <a href="https://hawklabsnordic.se" class="flex items-center gap-2 font-bold tracking-wider text-sm md:text-base">
+                <img src="/wp-content/uploads/2026/10/cropped-logo_main-32x32.png" alt="HawkLabs Logo" class="w-7 h-7 object-contain rounded">
+                <span>HAWKLABS <span class="text-gray-400 font-normal">/</span> NORDIC</span>
+            </a>
+        </div>
+        
+        <!-- Språkväljare med flaggor -->
+        <div class="flex items-center gap-2 text-xs">
+            <a href="?lang=sv" id="lang-sv" class="px-2.5 py-1 rounded font-bold transition">🇸🇪 Svenska</a>
+            <span class="text-gray-600">|</span>
+            <a href="?lang=en" id="lang-en" class="px-2.5 py-1 rounded font-bold transition">🇬🇧 English</a>
+        </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-12 flex-grow">
-        <h1 class="text-3xl font-bold mb-6 text-white">Om HawkLabs Nordic</h1>
-        <p class="text-gray-400 mb-8 leading-relaxed">
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow max-w-3xl mx-auto px-6 py-12 w-full">
+        <!-- Tillbakaknapp -->
+        <div class="mb-8">
+            <a href="https://hawklabsnordic.se" class="inline-flex items-center gap-2 text-xs font-semibold text-[var(--hawk-muted)] hover:text-white bg-[var(--hawk-surface)] border border-[var(--hawk-line)] px-3.5 py-2 rounded-xl transition">
+                ← <span data-i18n="back_home">Tillbaka till start</span>
+            </a>
+        </div>
+
+        <h1 class="text-3xl font-extrabold mb-4" data-i18n="page_title">Om HawkLabs Nordic</h1>
+        <p class="text-[var(--hawk-muted)] leading-relaxed mb-6" data-i18n="page_desc">
             HawkLabs Nordic drivs med en enkel övertygelse: genomtänkta, digitala verktyg kan göra verklig skillnad i vardagen.
         </p>
-
-        <div class="space-y-6 text-gray-300 leading-relaxed text-sm">
-            <section>
-                <p>
-                    Istället för att jaga kortsiktiga trender eller bygga onödigt komplicerade system utvecklar vi praktiska och användarvänliga produkter utifrån verkliga behov. Oavsett om det handlar om att ge arbetssökande en tryggare resa med <strong class="text-white">JobHawk</strong> eller att skapa smarta lösningar för djurägare med <strong class="text-white">MyFluffy</strong>, ställs människan och nytta alltid i första rummet.
-                </p>
-            </section>
-
-            <section class="mt-8 border-t border-gray-900 pt-6">
-                <h2 class="text-lg font-semibold text-white mb-4">Våra principer</h2>
-                <ul class="space-y-3">
-                    <li class="bg-gray-900/50 p-4 rounded-lg border border-gray-800/50">
-                        <strong class="text-white block mb-1">1. Människan först</strong>
-                        Mindre friktion, mer nytta och mer värde i vardagen.
-                    </li>
-                    <li class="bg-gray-900/50 p-4 rounded-lg border border-gray-800/50">
-                        <strong class="text-white block mb-1">2. Enkelhet vinner</strong>
-                        Komplexa problem förtjänar rena, intuitiva och snabba lösningar.
-                    </li>
-                    <li class="bg-gray-900/50 p-4 rounded-lg border border-gray-800/50">
-                        <strong class="text-white block mb-1">3. Byggt med syfte</strong>
-                        Allt vi lanserar ska fylla ett faktiskt funktionellt behov.
-                    </li>
-                </ul>
-            </section>
-        </div>
     </main>
 
-    <footer class="border-t border-gray-900 py-6 text-center text-xs text-gray-600">
-        &copy; 2026 HawkLabs Nordic. Alla rättigheter förbehållna.
+    <!-- FOOTER -->
+    <footer class="border-t border-[var(--hawk-line)] py-8 px-6 text-center text-xs text-[var(--hawk-muted)]">
+        <p>© 2026 HawkLabs Nordic. <span data-i18n="footer_rights">Alla rättigheter förbehållna.</span></p>
     </footer>
+
+    <!-- ÖVERSÄTTNINGAR FÖR SIDAN -->
+    <script>
+        const translations = {
+            sv: {
+                back_home: "Tillbaka till start",
+                page_title: "Om HawkLabs Nordic",
+                page_desc: "HawkLabs Nordic drivs med en enkel övertygelse: genomtänkta, digitala verktyg kan göra verklig skillnad i vardagen.",
+                footer_rights: "Alla rättigheter förbehållna."
+            },
+            en: {
+                back_home: "Back to home",
+                page_title: "About HawkLabs Nordic",
+                page_desc: "HawkLabs Nordic is driven by a simple belief: thoughtful digital tools can make a real difference in everyday life.",
+                footer_rights: "All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('hawk_lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            const svBtn = document.getElementById('lang-sv');
+            const enBtn = document.getElementById('lang-en');
+
+            if (lang === 'en') {
+                enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+                svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+            } else {
+                svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+                enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('hawk_lang');
+            
+            const selectedLang = urlLang || savedLang || 'sv';
+            setLanguage(selectedLang);
+        });
+    </script>
 </body>
 </html>
