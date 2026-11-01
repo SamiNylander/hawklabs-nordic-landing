@@ -15,6 +15,10 @@
 	<link rel="alternate" hreflang="en" href="?lang=en">
 	<link rel="alternate" hreflang="sv" href="?lang=sv">
 	<link rel="alternate" hreflang="x-default" href="?lang=en">
+	
+	<!-- Favicon -->
+	<link rel="icon" href="/wp-content/uploads/2026/10/cropped-logo_main-32x32.png" sizes="32x32">
+
 	<style>
 		:root {
 			color-scheme: dark;
@@ -380,61 +384,6 @@
 			font-size: 13px;
 		}
 
-		.hawk-video-card {
-			background: #03060d;
-			border: 1px solid rgba(0, 229, 255, 0.22);
-			border-radius: 14px;
-			box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-			overflow: hidden;
-			position: relative;
-		}
-
-		.hawk-video {
-			aspect-ratio: 16 / 9;
-			background: #03060d;
-			display: block;
-			object-fit: cover;
-			width: 100%;
-		}
-
-		.hawk-video-play {
-			align-items: center;
-			backdrop-filter: blur(8px);
-			background: rgba(0, 229, 255, 0.92);
-			border: 1px solid rgba(255, 255, 255, 0.55);
-			border-radius: 50%;
-			box-shadow: 0 0 52px rgba(0, 229, 255, 0.4);
-			color: #041018;
-			cursor: pointer;
-			display: flex;
-			font-size: 25px;
-			height: 74px;
-			justify-content: center;
-			left: 50%;
-			line-height: 1;
-			padding: 0 0 0 5px;
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			transition: opacity 180ms ease, transform 180ms ease;
-			width: 74px;
-		}
-
-		.hawk-video-play:hover {
-			transform: translate(-50%, -50%) scale(1.08);
-		}
-
-		.hawk-video-card.is-playing .hawk-video-play {
-			opacity: 0;
-			pointer-events: none;
-		}
-
-		.hawk-video-card.is-playing:hover .hawk-video-play,
-		.hawk-video-card.is-playing .hawk-video-play:focus-visible {
-			opacity: 1;
-			pointer-events: auto;
-		}
-
 		.hawk-section-heading {
 			align-items: end;
 			display: flex;
@@ -514,13 +463,6 @@
 			padding: 14px;
 		}
 
-		.hawk-product-visual--light {
-			background: #f8fafc;
-			border-color: rgba(255, 255, 255, 0.75);
-			box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
-			padding: 12px;
-		}
-
 		.hawk-app-screenshot {
 			width: 100%;
 			max-width: 540px;
@@ -541,11 +483,6 @@
 			margin-top: 0;
 		}
 
-		.hawk-product-visual--light .hawk-app-screenshot {
-			border-color: rgba(15, 23, 42, 0.12);
-			box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
-		}
-
 		.hawk-product-preview {
 			aspect-ratio: 16 / 9;
 			background: #0f172a;
@@ -557,9 +494,6 @@
 
 		.hawk-lab-card > .hawk-product-preview {
 			z-index: 2;
-		}
-
-		.hawk-lab-card > .hawk-product-preview {
 			width: 100%;
 			max-width: 540px;
 			margin: 20px auto 0;
@@ -580,15 +514,6 @@
 			transition: opacity 300ms ease;
 		}
 
-		.hawk-product-preview .hawk-app-screenshot {
-			margin: 0;
-			max-width: none;
-		}
-
-		.hawk-product-preview .hawk-app-screenshot:hover {
-			transform: none;
-		}
-
 		.hawk-preview-video {
 			background: transparent;
 			opacity: 0;
@@ -602,11 +527,6 @@
 
 		.hawk-product-preview.is-playing .hawk-preview-video {
 			opacity: 1;
-		}
-
-		.hawk-lab-card:hover {
-			border-color: rgba(0, 229, 255, 0.5);
-			transform: translateY(-4px);
 		}
 
 		.hawk-product-icon {
@@ -709,36 +629,6 @@
 			min-height: 0;
 		}
 
-		.hawk-badge-fallback {
-			align-items: center;
-			color: var(--hawk-muted);
-			display: flex;
-			flex-direction: column;
-			font-size: 10px;
-			gap: 8px;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-		}
-
-		.hawk-badge-fallback::before {
-			align-items: center;
-			border: 1px solid rgba(0, 229, 255, 0.38);
-			border-radius: 9px 9px 9px 3px;
-			color: var(--hawk-blue);
-			content: "B";
-			display: flex;
-			font-size: 23px;
-			font-weight: 800;
-			height: 48px;
-			justify-content: center;
-			width: 48px;
-		}
-
-		.hawk-badge-preview.is-loaded .hawk-badge-fallback,
-		.hawk-badge-preview.is-unavailable img {
-			display: none;
-		}
-
 		.hawk-specs {
 			align-items: start;
 			display: grid;
@@ -754,54 +644,6 @@
 			font-size: 14px;
 		}
 
-		.hawk-spec-table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		.hawk-spec-table th,
-		.hawk-spec-table td {
-			border-bottom: 1px solid var(--hawk-line);
-			padding: 15px 10px;
-			text-align: left;
-			vertical-align: middle;
-		}
-
-		.hawk-spec-table th {
-			color: var(--hawk-muted);
-			font-size: 10px;
-			font-weight: 700;
-			letter-spacing: 0.12em;
-			text-transform: uppercase;
-		}
-
-		.hawk-spec-table td {
-			font-size: 13px;
-		}
-
-		.hawk-spec-table td:first-child {
-			color: var(--hawk-muted);
-			width: 29%;
-		}
-
-		.hawk-spec-table td:last-child {
-			font-weight: 650;
-		}
-
-		.hawk-built-in {
-			background: rgba(0, 229, 255, 0.07);
-			border: 1px solid rgba(0, 229, 255, 0.26);
-			border-radius: 999px;
-			color: var(--hawk-blue);
-			display: inline-block;
-			font-size: 9px;
-			font-weight: 800;
-			letter-spacing: 0.08em;
-			margin-left: 8px;
-			padding: 4px 8px;
-			white-space: nowrap;
-		}
-
 		.hawk-footer {
 			border-top: 1px solid var(--hawk-line);
 			color: var(--hawk-muted);
@@ -815,197 +657,13 @@
 			color: var(--hawk-blue);
 		}
 
-		@media (max-width: 900px) {
-			.hawk-header {
-				align-items: flex-start;
-				flex-direction: column;
-				gap: 12px;
-				padding: 17px 0;
-			}
-
-			.hawk-nav {
-				flex-wrap: wrap;
-				gap: 12px 22px;
-			}
-
-			.hawk-hero {
-				gap: 45px;
-				grid-template-columns: 1fr;
-				min-height: 0;
-				padding: 72px 0 78px;
-			}
-
-			.hawk-hero-art {
-				min-height: 350px;
-			}
-
-			.hawk-jobhawk,
-			.hawk-specs {
-				grid-template-columns: 1fr;
-			}
-
-			.hawk-product-showcase {
-				grid-template-columns: minmax(0, 1fr);
-			}
-		}
-
-		@media (max-width: 620px) {
-			.hawk-page {
-				padding: 0 20px;
-			}
-
-			.hawk-nav {
-				gap: 12px 20px;
-			}
-
-			.hawk-nav a {
-				font-size: 12px;
-			}
-
-			.hawk-hero h1 {
-				font-size: clamp(42px, 12vw, 60px);
-			}
-
-			.hawk-hero-art {
-				min-height: 300px;
-			}
-
-			.hawk-lab-grid {
-				grid-template-columns: 1fr;
-			}
-
-			.hawk-section-heading {
-				align-items: flex-start;
-				flex-direction: column;
-			}
-
-			.hawk-video-play {
-				height: 62px;
-				width: 62px;
-			}
-
-			.hawk-spec-table th,
-			.hawk-spec-table td {
-				padding: 12px 5px;
-			}
-
-			.hawk-spec-table td,
-			.hawk-spec-table th {
-				font-size: 11px;
-			}
-
-			.hawk-contact {
-				align-items: flex-start;
-				grid-template-columns: 1fr;
-			}
-
-			.hawk-footer {
-				grid-template-columns: 1fr;
-			}
-
-			.hawk-built-in {
-				margin: 4px 0 0;
-			}
-
-			.hawk-footer-built,
-			.hawk-footer-links {
-				text-align: left;
-			}
-
-			.hawk-form-fields {
-				grid-template-columns: 1fr;
-			}
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			*,
-			*::before,
-			*::after {
-				transition-duration: 0.01ms !important;
-			}
-
-			.fade-in-element {
-				opacity: 1;
-				transform: none;
-			}
-		}
-
-		footer.wp-block-template-part,
-		.wp-block-template-part.footer,
-		div.wp-block-group.has-background {
-			display: none !important;
-		}
-
 		header.hawk-header {
 			position: sticky !important;
 			top: 0 !important;
 			z-index: 1000 !important;
-			background-color: rgba(5, 8, 17, 0.85) !important;
-			backdrop-filter: blur(12px) !important;
+			background-color: rgba(5, 8, 17, 0.88) !important;
+			backdrop-filter: blur(18px) !important;
 			width: 100% !important;
-		}
-
-		.editor-styles-wrapper,
-		.wp-block-post-content,
-		.entry-content,
-		main,
-		section,
-		div.hawk-page-wrapper {
-			max-width: 100% !important;
-			width: 100% !important;
-			padding: 0 !important;
-			margin: 0 !important;
-		}
-
-		.hawk-shell {
-			max-width: 1480px !important;
-			margin: 0 auto !important;
-			width: 90% !important;
-		}
-
-		#JobHawk,
-		#spothawk,
-		#badgehawk,
-		#myfluffy {
-			scroll-margin-top: 140px !important;
-		}
-
-		main.hawk-page {
-			padding: 0 !important;
-		}
-
-		section.hawk-hero {
-			padding: 82px 0 94px !important;
-		}
-
-		section.hawk-section {
-			padding: clamp(72px, 9vw, 116px) 0 !important;
-		}
-
-		@media (max-width: 900px) {
-			section.hawk-hero {
-				padding: 72px 0 78px !important;
-			}
-		}
-
-		@media (min-width: 901px) {
-			.hawk-hero {
-				min-height: max(700px, calc(100vh - 92px)) !important;
-				min-height: max(700px, calc(100svh - 92px)) !important;
-			}
-
-			.hawk-hero h1 {
-				font-size: clamp(58px, 8.2vw, 108px);
-				max-width: 900px;
-			}
-
-			.hawk-hero-art {
-				min-height: clamp(520px, 62vh, 720px);
-			}
-
-			.hawk-hero-art img.hawk-real-logo {
-				max-width: min(100%, 460px);
-			}
 		}
 
 		main.hawk-page {
@@ -1020,16 +678,6 @@
 			margin: 0 auto !important;
 			max-width: 1560px !important;
 			width: 100% !important;
-		}
-
-		.hawk-header {
-			backdrop-filter: blur(18px);
-			background: rgba(5, 8, 17, 0.88) !important;
-			min-height: 82px;
-			padding: 0 clamp(2px, 1vw, 14px);
-			position: sticky !important;
-			top: 0 !important;
-			z-index: 1000 !important;
 		}
 
 		.hawk-brand {
@@ -1655,6 +1303,52 @@
 			outline-offset: 4px;
 		}
 
+		/* Mobilespecifik centrering och linjering */
+		@media (max-width: 900px) {
+			.hawk-section, 
+			.hawk-section-heading, 
+			.hawk-story-grid, 
+			.hawk-lab-grid,
+			.hawk-hero,
+			.hawk-founder,
+			.hawk-community {
+				text-align: center !important;
+				justify-items: center !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			
+			.hawk-section-heading {
+				flex-direction: column !important;
+				align-items: center !important;
+			}
+
+			.hawk-section-heading > p,
+			.hawk-jobhawk-copy > p,
+			.hawk-specs-copy > p,
+			.hawk-card-description,
+			.hawk-card-tagline,
+			.hawk-story-copy,
+			.hawk-founder-copy p {
+				margin-left: auto !important;
+				margin-right: auto !important;
+				text-align: center !important;
+			}
+			
+			.hawk-lab-grid {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				width: 100% !important;
+			}
+
+			.hawk-lab-card {
+				width: 100% !important;
+				max-width: 500px !important;
+				text-align: left !important;
+			}
+		}
+
 		@media (min-width: 1920px) {
 			.hawk-shell {
 				max-width: 1600px !important;
@@ -1837,29 +1531,12 @@
 				transition-duration: 0.01ms !important;
 			}
 		}
-		@media (max-width: 900px) {
-    /* Tvinga bort fasta vänstermarginaler som kan blockera */
-    .hawk-section, 
-    .hawk-section-heading, 
-    .hawk-story-grid, 
-    .hawk-lab-grid,
-    .hawk-hero {
-        text-align: center !important;
-        justify-items: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* Stapla och centrera produktkorten */
-    .hawk-lab-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-}
-    }
-}
+
+		footer.wp-block-template-part,
+		.wp-block-template-part.footer,
+		div.wp-block-group.has-background {
+			display: none !important;
+		}
 	</style>
 </head>
 <body>
