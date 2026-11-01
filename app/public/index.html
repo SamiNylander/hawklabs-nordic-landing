@@ -864,32 +864,27 @@
 			font-size: 13px;
 		}
 
-		/* Mobilespecifik fix: Ingen kapad rullning, ren och centrerad radbrytning */
+		/* Mobilespecifika justeringar från den ursprungliga versionen med horisontell rullning */
 		@media (max-width: 900px) {
 			.hawk-header {
-				align-items: center;
+				align-items: flex-start;
 				flex-direction: column;
-				gap: 14px;
-				padding: 16px;
+				gap: 12px;
+				padding: 17px 0;
 			}
 
 			.hawk-nav {
-				align-items: center;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 8px 16px;
+				flex-wrap: nowrap;
+				gap: 12px 22px;
+				overflow-x: auto;
+				max-width: 100%;
+				padding: 0 2px 4px;
+				scrollbar-width: none;
 				width: 100%;
-				overflow: visible !important;
 			}
 
-			.hawk-nav a {
-				font-size: 12px;
-				white-space: nowrap;
-			}
-
-			.hawk-nav .hawk-talk {
-				padding: 6px 14px;
+			.hawk-nav::-webkit-scrollbar {
+				display: none;
 			}
 
 			.hawk-hero {
@@ -912,6 +907,10 @@
 		@media (max-width: 620px) {
 			.hawk-page {
 				padding: 0 20px;
+			}
+
+			.hawk-nav a {
+				font-size: 12px;
 			}
 
 			.hawk-hero h1 {
