@@ -1,4 +1,3 @@
-
 <!doctype html>
 <!-- Template Name: HawkLabs Nordic -->
 <html lang="en" data-language-base="/wp-content/themes/twentytwentyfive/languages/">
@@ -1838,29 +1837,41 @@
 				transition-duration: 0.01ms !important;
 			}
 		}
+		
 		@media (max-width: 900px) {
-    /* Tvinga bort fasta vänstermarginaler som kan blockera */
-    .hawk-section, 
-    .hawk-section-heading, 
-    .hawk-story-grid, 
-    .hawk-lab-grid,
-    .hawk-hero {
-        text-align: center !important;
-        justify-items: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* Stapla och centrera produktkorten */
-    .hawk-lab-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-}
-    }
-}
+			/* Tvinga bort fasta vänstermarginaler och centrera rubrikerna ordentligt */
+			.hawk-section, 
+			.hawk-section-heading, 
+			.hawk-story-grid, 
+			.hawk-lab-grid,
+			.hawk-hero {
+				text-align: center !important;
+				justify-items: center !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			
+			.hawk-section-heading {
+				flex-direction: column !important;
+				align-items: center !important;
+				text-align: center !important;
+			}
+
+			.hawk-section-heading > div,
+			.hawk-section-heading > p {
+				text-align: center !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			
+			/* Stapla och centrera produktkorten */
+			.hawk-lab-grid {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				width: 100% !important;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -2471,4 +2482,4 @@
 		});
 	</script>
 </body>
-																																 </html>
+</html>
