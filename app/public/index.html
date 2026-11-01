@@ -1303,8 +1303,44 @@
 			outline-offset: 4px;
 		}
 
-		/* Mobilespecifik centrering och linjering */
+		/* Mobilespecifik centrering och flödesfixar */
 		@media (max-width: 900px) {
+			.hawk-header {
+				align-items: center !important;
+				flex-direction: column !important;
+				gap: 14px !important;
+				padding: 16px 12px !important;
+			}
+
+			.hawk-nav {
+				display: flex !important;
+				flex-wrap: wrap !important;
+				justify-content: center !important;
+				align-items: center !important;
+				gap: 8px 16px !important;
+				width: 100% !important;
+				overflow-x: visible !important;
+			}
+
+			.hawk-hero {
+				grid-template-columns: 1fr !important;
+			}
+
+			.hawk-hero-art {
+				display: flex !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+				min-height: 320px !important;
+				width: 100% !important;
+				margin-top: 20px;
+			}
+
+			.hawk-logo-media {
+				width: 100% !important;
+				max-width: 320px !important;
+				height: auto !important;
+			}
+
 			.hawk-section, 
 			.hawk-section-heading, 
 			.hawk-story-grid, 
@@ -1403,26 +1439,6 @@
 				padding: 0 20px !important;
 			}
 
-			.hawk-header {
-				align-items: flex-start;
-				flex-direction: column;
-				gap: 10px;
-				min-height: 0;
-				padding: 14px 0 10px;
-			}
-
-			.hawk-nav {
-				max-width: 100%;
-				overflow-x: auto;
-				padding: 0 2px 4px;
-				scrollbar-width: none;
-				width: 100%;
-			}
-
-			.hawk-nav::-webkit-scrollbar {
-				display: none;
-			}
-
 			.hawk-nav a {
 				font-size: 12px;
 			}
@@ -1442,18 +1458,9 @@
 				font-size: clamp(46px, 11vw, 68px);
 			}
 
-			.hawk-hero-art {
-				min-height: 320px;
-				padding: 28px;
-			}
-
 			.hawk-real-logo {
 				max-height: 180px;
 				max-width: 100% !important;
-			}
-
-			.hawk-logo-media {
-				width: min(100%, 300px);
 			}
 
 			.hawk-story-grid,
