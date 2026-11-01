@@ -864,49 +864,30 @@
 			font-size: 13px;
 		}
 
-		/* Mobilespecifika justeringar för korrekt radbrytning i header */
+		/* Mobilespecifika justeringar som fixar radbrytningen på små skärmar */
 		@media (max-width: 900px) {
 			.hawk-header {
-				align-items: stretch;
+				align-items: center;
 				flex-direction: column;
 				gap: 12px;
-				padding: 14px 16px;
-			}
-
-			.hawk-brand {
-				justify-content: flex-start;
+				padding: 16px;
 			}
 
 			.hawk-nav {
 				align-items: center;
 				display: flex;
-				flex-wrap: nowrap;
-				gap: 16px;
-				max-width: 100%;
-				overflow-x: auto;
-				padding: 4px 0 8px;
-				scrollbar-width: none;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 10px 18px;
 				width: 100%;
-				-webkit-overflow-scrolling: touch;
-			}
-
-			.hawk-nav::-webkit-scrollbar {
-				display: none;
 			}
 
 			.hawk-nav a {
-				flex: 0 0 auto;
-				font-size: 13px;
-				white-space: nowrap;
+				font-size: 12px;
 			}
 
 			.hawk-nav .hawk-talk {
-				flex: 0 0 auto;
-				padding: 8px 16px;
-			}
-
-			.hawk-language-switcher {
-				flex: 0 0 auto;
+				padding: 6px 12px;
 			}
 
 			.hawk-hero {
