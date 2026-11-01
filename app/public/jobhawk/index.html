@@ -48,20 +48,19 @@
         }
     </style>
     <script>
-        // Tvinga webbläsaren att alltid börja högst upp på sidan vid laddning
         if (window.location.hash) {
             window.scrollTo(0, 0);
         }
     </script>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-accent selection:text-darkbg">
+<body class="min-h-screen flex flex-col justify-between selection:bg-accent selection:text-darkbg overflow-x-hidden">
 
     <!-- NAVIGATION -->
     <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
         <div class="flex items-center gap-3">
             <a href="https://jobhawk.se" class="flex items-center gap-2 font-bold tracking-wider text-lg">
                 <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-                JOB<span class="text-accent">HAWK</span>
+                JOBHAWK
             </a>
         </div>
         <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--hawk-muted)]">
@@ -78,8 +77,8 @@
     </header>
 
     <!-- HERO SECTION -->
-    <main class="flex-grow">
-        <section class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
+    <main class="flex-grow w-full overflow-hidden">
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
             <span class="inline-block py-1 px-3 rounded-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-accent text-xs font-semibold tracking-wide mb-6" data-i18n="hero_tag">
                 AI-DRIVEN KARRIÄRPLATTFORM
             </span>
@@ -96,73 +95,73 @@
             </div>
         </section>
 
-        <!-- JÄmfÖRELSETABELL -->
-        <section id="comparison" class="max-w-4xl mx-auto px-6 py-12">
+        <!-- JÄMFÖRELSETABELL -->
+        <section id="comparison" class="max-w-4xl mx-auto px-3 sm:px-6 py-12">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="comp_heading">ChatGPT vs JobHawk</h2>
                 <p class="text-[var(--hawk-muted)]" data-i18n="comp_sub">Se varför en specialiserad plattform gör hela skillnaden för ditt jobbsökande.</p>
             </div>
 
-            <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl overflow-hidden shadow-xl">
-                <div class="overflow-x-auto">
+            <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl overflow-hidden shadow-xl max-w-full">
+                <div class="overflow-x-auto w-full">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="border-b border-[var(--hawk-line)] bg-[var(--hawk-surface-raised)] text-xs uppercase tracking-wider text-[var(--hawk-muted)]">
-                                <th class="py-4 px-6" data-i18n="th_feature">Funktion</th>
-                                <th class="py-4 px-6 text-center" data-i18n="th_chatgpt">ChatGPT</th>
-                                <th class="py-4 px-6 text-center text-accent font-bold" data-i18n="th_jobhawk">JobHawk</th>
+                            <tr class="border-b border-[var(--hawk-line)] bg-[var(--hawk-surface-raised)] text-[10px] sm:text-xs uppercase tracking-wider text-[var(--hawk-muted)]">
+                                <th class="py-3 px-3 sm:py-4 sm:px-6" data-i18n="th_feature">Funktion</th>
+                                <th class="py-3 px-2 sm:py-4 sm:px-6 text-center" data-i18n="th_chatgpt">ChatGPT</th>
+                                <th class="py-3 px-2 sm:py-4 sm:px-6 text-center text-accent font-bold" data-i18n="th_jobhawk">JobHawk</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-[var(--hawk-line)] text-sm">
+                        <tbody class="divide-y divide-[var(--hawk-line)] text-xs sm:text-sm">
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row1_f">Hjälper dig skriva CV</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row1_f">Hjälper dig skriva CV</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row2_f">Hjälper dig skriva personligt brev</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row2_f">Hjälper dig skriva personligt brev</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row3_f">Hittar relevanta jobb automatiskt</td>
-                                <td class="py-4 px-6 text-center text-lg">❌</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row3_f">Hittar relevanta jobb automatiskt</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">❌</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row4_f">Samlar jobb från flera källor</td>
-                                <td class="py-4 px-6 text-center text-lg">❌</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row4_f">Samlar jobb från flera källor</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">❌</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row5_f">Matchar ditt CV mot jobbannonser</td>
-                                <td class="py-4 px-6 text-center text-[var(--hawk-muted)] font-medium text-xs uppercase" data-i18n="val_partial">Delvis</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row5_f">Matchar ditt CV mot jobbannonser</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-[var(--hawk-muted)] font-medium text-[10px] sm:text-xs uppercase" data-i18n="val_partial">Delvis</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row6_f">Anpassar CV för varje jobb</td>
-                                <td class="py-4 px-6 text-center text-[var(--hawk-muted)] font-medium text-xs uppercase" data-i18n="val_manual">Manuellt</td>
-                                <td class="py-4 px-6 text-center font-bold text-accent text-xs uppercase tracking-wider" data-i18n="val_auto">✨ Automatiskt</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row6_f">Anpassar CV för varje jobb</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-[var(--hawk-muted)] font-medium text-[10px] sm:text-xs uppercase" data-i18n="val_manual">Manuellt</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center font-bold text-accent text-[10px] sm:text-xs uppercase tracking-wider" data-i18n="val_auto">✨ Automatiskt</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row7_f">Anpassar personligt brev för varje jobb</td>
-                                <td class="py-4 px-6 text-center text-[var(--hawk-muted)] font-medium text-xs uppercase" data-i18n="val_manual">Manuellt</td>
-                                <td class="py-4 px-6 text-center font-bold text-accent text-xs uppercase tracking-wider" data-i18n="val_auto">✨ Automatiskt</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row7_f">Anpassar personligt brev för varje jobb</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-[var(--hawk-muted)] font-medium text-[10px] sm:text-xs uppercase" data-i18n="val_manual">Manuellt</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center font-bold text-accent text-[10px] sm:text-xs uppercase tracking-wider" data-i18n="val_auto">✨ Automatiskt</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row8_f">Hanterar flera jobb samtidigt</td>
-                                <td class="py-4 px-6 text-center text-lg">❌</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row8_f">Hanterar flera jobb samtidigt</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">❌</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6 font-medium" data-i18n="row9_f">Ett arbetsflöde för hela jobbsökandet</td>
-                                <td class="py-4 px-6 text-center text-lg">❌</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium" data-i18n="row9_f">Ett arbetsflöde för hela jobbsökandet</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">❌</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                             <tr class="bg-[var(--hawk-surface-raised)]/50">
-                                <td class="py-4 px-6 font-bold" data-i18n="row10_f">Byggt specifikt för nordiska arbetssökande</td>
-                                <td class="py-4 px-6 text-center text-lg">❌</td>
-                                <td class="py-4 px-6 text-center text-lg">✅</td>
+                                <td class="py-3 px-3 sm:py-4 sm:px-6 font-bold" data-i18n="row10_f">Byggt specifikt för nordiska arbetssökande</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">❌</td>
+                                <td class="py-3 px-2 sm:py-4 sm:px-6 text-center text-base">✅</td>
                             </tr>
                         </tbody>
                     </table>
@@ -171,7 +170,7 @@
         </section>
 
         <!-- PRICING SECTION -->
-        <section id="pricing" class="max-w-5xl mx-auto px-6 py-16">
+        <section id="pricing" class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
             <div class="text-center mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="pricing_heading">Flexibla pass för dina behov</h2>
                 <p class="text-[var(--hawk-muted)]" data-i18n="pricing_sub">Engångsköp utan dolda prenumerationsfällor när du söker aktivt.</p>
@@ -240,7 +239,7 @@
 
     <!-- FOOTER MED JURIDISKA LÄNKAR -->
     <footer class="border-t border-[var(--hawk-line)] py-10 px-6 bg-[var(--hawk-surface)]/30 text-xs text-[var(--hawk-muted)]">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <p>© 2026 HawkLabs Nordic. <span data-i18n="footer_rights">Alla rättigheter förbehållna.</span></p>
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="https://www.hawklabsnordic.se/about.html" class="hover:text-white transition" data-i18n="footer_about">Om oss</a>
