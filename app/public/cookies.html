@@ -51,7 +51,7 @@
     <!-- NAVIGATION MED LOGOTYP OCH FLAGGOR -->
     <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
         <div class="flex items-center gap-3">
-            <a href="https://jobhawk.se" class="flex items-center gap-2 font-bold tracking-wider text-sm md:text-base">
+            <a href="/" class="flex items-center gap-2 font-bold tracking-wider text-sm md:text-base">
                 <img src="/wp-content/uploads/2026/10/cropped-logo_main-32x32.png" alt="HawkLabs Logo" class="w-7 h-7 object-contain rounded">
                 <span>HAWKLABS <span class="text-gray-400 font-normal">/</span> NORDIC</span>
             </a>
@@ -67,32 +67,32 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow max-w-3xl mx-auto px-6 py-12 w-full">
-        <!-- Tillbakaknapp -->
+        <!-- Dynamisk Tillbakaknapp -->
         <div class="mb-8">
-            <a href="https://jobhawk.se" class="inline-flex items-center gap-2 text-xs font-semibold text-[var(--hawk-muted)] hover:text-white bg-[var(--hawk-surface)] border border-[var(--hawk-line)] px-3.5 py-2 rounded-xl transition">
-                ← <span data-i18n="back_home">Tillbaka till start</span>
-            </a>
+            <button onclick="goBack()" class="inline-flex items-center gap-2 text-xs font-semibold text-[var(--hawk-muted)] hover:text-white bg-[var(--hawk-surface)] border border-[var(--hawk-line)] px-3.5 py-2 rounded-xl transition cursor-pointer">
+                ← <span data-i18n="back_button">Tillbaka</span>
+            </button>
         </div>
 
         <h1 class="text-3xl font-extrabold mb-2" data-i18n="page_title">Cookies & Kakor</h1>
         <p class="text-xs text-[var(--hawk-muted)] mb-8" data-i18n="page_updated">Senast uppdaterad: Oktober 2026</p>
 
         <div class="space-y-6 text-sm text-[var(--hawk-muted)] leading-relaxed">
-            <div>
+            <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6">
                 <h2 class="text-white font-bold text-base mb-2" data-i18n="sec1_title">Vad är cookies?</h2>
                 <p data-i18n="sec1_desc">En cookie (eller kaka) är en liten textfil som sparas på din dator eller mobila enhet när du besöker en webbplats. Den hjälper sidan att komma ihåg dina inställningar och gör din upplevelse smidigare.</p>
             </div>
 
-            <div>
+            <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6">
                 <h2 class="text-white font-bold text-base mb-2" data-i18n="sec2_title">Hur HawkLabs Nordic använder cookies</h2>
-                <p class="mb-2" data-i18n="sec2_desc">Vi håller våra webbplatser så rena och integritetsvänliga som möjligt. Vi använder i huvudsak följande typer av cookies och lagring:</p>
-                <ul class="list-disc pl-5 space-y-1">
+                <p class="mb-3" data-i18n="sec2_desc">Vi håller våra webbplatser så rena och integritetsvänliga som möjligt. Vi använder i huvudsak följande typer av cookies och lagring:</p>
+                <ul class="list-disc pl-5 space-y-2">
                     <li><strong class="text-white" data-i18n="cookie_type1_name">Nödvändiga cookies:</strong> <span data-i18n="cookie_type1_desc">För att komma ihåg dina val (som språkinställningar eller aktiv session).</span></li>
                     <li><strong class="text-white" data-i18n="cookie_type2_name">Prestanda & Säkerhet:</strong> <span data-i18n="cookie_type2_desc">För att skydda formulär och säkerställa snabb laddning via våra servrar och betalningslösningar (t.ex. Stripe).</span></li>
                 </ul>
             </div>
 
-            <div>
+            <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6">
                 <h2 class="text-white font-bold text-base mb-2" data-i18n="sec3_title">Hantera dina cookies</h2>
                 <p data-i18n="sec3_desc">Du kan när som helst ändra inställningarna i din webbläsare för att blockera eller radera cookies. Observera att vissa funktioner på våra applikationer kan sluta fungera optimalt om du stänger av cookies helt.</p>
             </div>
@@ -104,12 +104,12 @@
         <p>© 2026 HawkLabs Nordic. <span data-i18n="footer_rights">Alla rättigheter förbehållna.</span></p>
     </footer>
 
-    <!-- ÖVERSÄTTNINGAR -->
+    <!-- ÖVERSÄTTNINGAR OCH SMART TILLBAKA-LOGIK -->
     <script>
         const translations = {
             sv: {
                 meta_title: "Kakor & Cookies – HawkLabs Nordic",
-                back_home: "Tillbaka till start",
+                back_button: "Tillbaka",
                 page_title: "Cookies & Kakor",
                 page_updated: "Senast uppdaterad: Oktober 2026",
                 sec1_title: "Vad är cookies?",
@@ -126,7 +126,7 @@
             },
             en: {
                 meta_title: "Cookies – HawkLabs Nordic",
-                back_home: "Back to home",
+                back_button: "Back",
                 page_title: "Cookies",
                 page_updated: "Last updated: October 2026",
                 sec1_title: "What are cookies?",
@@ -142,6 +142,14 @@
                 footer_rights: "All rights reserved."
             }
         };
+
+        function goBack() {
+            if (document.referrer && document.referrer.includes(window.location.host)) {
+                history.back();
+            } else {
+                window.location.href = '/';
+            }
+        }
 
         function setLanguage(lang) {
             localStorage.setItem('hawk_lang', lang);
