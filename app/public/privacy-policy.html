@@ -118,6 +118,34 @@
 			text-transform: uppercase;
 		}
 
+		/* Tillbakaknapp styling */
+		.back-button-wrap {
+			margin-top: 32px;
+			margin-bottom: -10px;
+		}
+
+		.back-btn {
+			align-items: center;
+			background: #0b1120;
+			border: 1px solid rgba(177, 195, 222, 0.15);
+			border-radius: 12px;
+			color: #94a3b8;
+			cursor: pointer;
+			display: inline-flex;
+			font-family: inherit;
+			font-size: 12px;
+			font-weight: 600;
+			gap: 8px;
+			padding: 8px 14px;
+			text-decoration: none;
+			transition: color 0.2s, border-color 0.2s;
+		}
+
+		.back-btn:hover {
+			border-color: rgba(0, 229, 255, 0.4);
+			color: #f7f8fb;
+		}
+
 		.policy-footer {
 			border-bottom: 0;
 			border-top: 1px solid rgba(177, 195, 222, 0.15);
@@ -146,6 +174,9 @@
 
 		<main>
 			<article class="policy-content" lang="en" data-policy-content="en">
+				<div class="back-button-wrap">
+					<button onclick="goBack()" class="back-btn" type="button">← Back</button>
+				</div>
 				<p class="policy-date">Last updated: 22 October 2026</p>
 				<h1>Privacy Policy</h1>
 				<p>HawkLabs Nordic respects your privacy and handles personal information in accordance with the General Data Protection Regulation (GDPR) and applicable Swedish data protection law.</p>
@@ -177,6 +208,9 @@
 			</article>
 
 			<article class="policy-content" lang="sv" data-policy-content="sv" hidden>
+				<div class="back-button-wrap">
+					<button onclick="goBack()" class="back-btn" type="button">← Tillbaka</button>
+				</div>
 				<p class="policy-date">Senast uppdaterad: 22 oktober 2026</p>
 				<h1>Integritetspolicy</h1>
 				<p>HawkLabs Nordic värnar om din integritet och hanterar personuppgifter i enlighet med dataskyddsförordningen (GDPR) och tillämplig svensk dataskyddslagstiftning.</p>
@@ -215,6 +249,15 @@
 	</div>
 
 	<script>
+		// Smart tillbakaknapp
+		function goBack() {
+			if (document.referrer && document.referrer.includes(window.location.host)) {
+				history.back();
+			} else {
+				window.location.href = '/';
+			}
+		}
+
 		(function () {
 			const buttons = document.querySelectorAll('[data-policy-language]');
 			const sections = document.querySelectorAll('[data-policy-content]');
