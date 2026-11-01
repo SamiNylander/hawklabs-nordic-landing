@@ -76,17 +76,6 @@
 			outline-offset: 4px;
 		}
 
-		.fade-in-element {
-			opacity: 0;
-			transform: translateY(30px);
-			transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-		}
-
-		.fade-in-element.is-visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
 		.hawk-page {
 			background:
 				radial-gradient(ellipse at 77% 5%, rgba(0, 229, 255, 0.075), transparent 31rem),
@@ -875,25 +864,49 @@
 			font-size: 13px;
 		}
 
-		/* Mobilespecifika justeringar från originalet */
+		/* Mobilespecifika justeringar för korrekt radbrytning i header */
 		@media (max-width: 900px) {
 			.hawk-header {
-				align-items: flex-start;
+				align-items: stretch;
 				flex-direction: column;
 				gap: 12px;
-				padding: 17px 0;
+				padding: 14px 16px;
+			}
+
+			.hawk-brand {
+				justify-content: flex-start;
 			}
 
 			.hawk-nav {
+				align-items: center;
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 16px;
 				max-width: 100%;
 				overflow-x: auto;
-				padding: 0 2px 4px;
+				padding: 4px 0 8px;
 				scrollbar-width: none;
 				width: 100%;
+				-webkit-overflow-scrolling: touch;
 			}
 
 			.hawk-nav::-webkit-scrollbar {
 				display: none;
+			}
+
+			.hawk-nav a {
+				flex: 0 0 auto;
+				font-size: 13px;
+				white-space: nowrap;
+			}
+
+			.hawk-nav .hawk-talk {
+				flex: 0 0 auto;
+				padding: 8px 16px;
+			}
+
+			.hawk-language-switcher {
+				flex: 0 0 auto;
 			}
 
 			.hawk-hero {
@@ -916,10 +929,6 @@
 		@media (max-width: 620px) {
 			.hawk-page {
 				padding: 0 20px;
-			}
-
-			.hawk-nav a {
-				font-size: 12px;
 			}
 
 			.hawk-hero h1 {
@@ -1552,7 +1561,7 @@
 		function stopLogoVideo() {
 			logoPlaybackRequested = false;
 			logoVideo.pause();
-      logoVideo.currentTime = 0;
+			logoVideo.currentTime = 0;
 			logoMedia.classList.remove('is-playing');
 		}
 
