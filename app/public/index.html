@@ -1303,7 +1303,7 @@
 			outline-offset: 4px;
 		}
 
-		/* Mobilespecifik centrering och flödesfixar */
+		/* Mobilespecifik layout: Tvingar fram navigation i flera rader och visar hero-bilden */
 		@media (max-width: 900px) {
 			.hawk-header {
 				align-items: center !important;
@@ -1323,6 +1323,8 @@
 			}
 
 			.hawk-hero {
+				display: flex !important;
+				flex-direction: column !important;
 				grid-template-columns: 1fr !important;
 			}
 
@@ -1330,15 +1332,27 @@
 				display: flex !important;
 				visibility: visible !important;
 				opacity: 1 !important;
-				min-height: 320px !important;
+				min-height: 340px !important;
 				width: 100% !important;
-				margin-top: 20px;
+				margin-top: 30px !important;
+				position: relative !important;
 			}
 
 			.hawk-logo-media {
+				display: block !important;
 				width: 100% !important;
-				max-width: 320px !important;
+				max-width: 300px !important;
 				height: auto !important;
+				margin: 0 auto !important;
+			}
+
+			.hawk-real-logo {
+				display: block !important;
+				width: 100% !important;
+				height: auto !important;
+				max-height: 200px !important;
+				object-fit: contain !important;
+				opacity: 1 !important;
 			}
 
 			.hawk-section, 
@@ -1456,11 +1470,6 @@
 
 			.hawk-hero h1 {
 				font-size: clamp(46px, 11vw, 68px);
-			}
-
-			.hawk-real-logo {
-				max-height: 180px;
-				max-width: 100% !important;
 			}
 
 			.hawk-story-grid,
