@@ -63,7 +63,8 @@
     <!-- HERO SECTION -->
     <main class="flex-grow w-full overflow-hidden">
         <section class="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-accent text-xs font-semibold tracking-wide mb-6" data-i18n="hero_tag">
+            <!-- Badgen högst upp använder nu hero_badge från lexikonet för att kunna översättas -->
+            <span class="inline-block py-1 px-3 rounded-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-accent text-xs font-semibold tracking-wide mb-6" data-i18n="hero_badge">
                 ALLA JOBB. ETT ARBETSFLÖDE.
             </span>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6" data-i18n="hero_title"></h1>
@@ -75,60 +76,58 @@
             </div>
         </section>
 
-        <!-- ARBETSSÖKANDE -->
-        <section class="max-w-5xl mx-auto px-4 py-16">
+       <!-- ARBETSSÖKANDE (BENTO GRID MED ATTRIBUT) -->
+        <section class="max-w-5xl mx-auto px-4 py-16 border-t border-[var(--hawk-line)]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3" data-i18n="find_jobs_heading">
+                    Hitta jobb på ditt sätt
+                </h2>
+                <p class="text-[var(--hawk-muted)]" data-i18n="find_jobs_desc">
+                    JobHawk hjälper olika typer av arbetssökande att hitta rätt möjligheter snabbare.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Senior 55+ -->
+                <a href="/jobhawk/jobbsokare/senior.html" class="bg-[var(--hawk-surface)] border border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition block">
+                    <h3 class="text-xl font-bold mb-2">
+                        🧑‍💼 <span data-i18n="audience_senior_title">Senior 55+</span>
+                    </h3>
+                    <p class="text-[var(--hawk-muted)]" data-i18n="audience_senior_desc">
+                        Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller.
+                    </p>
+                </a>
 
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-3">
-            Hitta jobb på ditt sätt
-        </h2>
-        <p class="text-[var(--hawk-muted)]">
-            JobHawk hjälper olika typer av arbetssökande att hitta rätt möjligheter snabbare.
-        </p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6">
-        <a href="/jobhawk/jobbsokare/senior.html"
-           class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition">
-            <h3 class="text-xl font-bold mb-2">
-                🧑‍💼 Senior 55+
-            </h3>
-            <p class="text-[var(--hawk-muted)]">
-                Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller.
-            </p>
+                <!-- Ungdom 15–17 år -->
+                <a href="/jobhawk/jobbsokare/ungdom.html" class="bg-[var(--hawk-surface)] border border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition block">
+                    <h3 class="text-xl font-bold mb-2">
+                        🎓 <span data-i18n="audience_youth_title">Ungdom 15–17 år</span>
+                    </h3>
+                    <p class="text-[var(--hawk-muted)]" data-i18n="audience_youth_desc">
+                        Sommarjobb, feriejobb och extrajobb för ungdomar.
+                    </p>
+                </a>
 
-        </a>
+                <!-- Vikariat & Timjobb -->
+                <a href="/jobhawk/jobbsokare/vikariat.html" class="bg-[var(--hawk-surface)] border border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition block">
+                    <h3 class="text-xl font-bold mb-2">
+                        🕒 <span data-i18n="audience_flex_title">Vikariat & Timjobb</span>
+                    </h3>
+                    <p class="text-[var(--hawk-muted)]" data-i18n="audience_flex_desc">
+                        Flexibla uppdrag och tillfälliga anställningar.
+                    </p>
+                </a>
 
-        <a href="/jobhawk/jobbsokare/ungdom.html"
-           class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition">
-
-            <h3 class="text-xl font-bold mb-2">
-                🎓 Ungdom 15–17 år
-            </h3>
-            <p class="text-[var(--hawk-muted)]">
-                Sommarjobb, feriejobb och extrajobb för ungdomar.
-            </p>
-        </a>
-        <a href="/jobhawk/jobbsokare/vikariat.html"
-           class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition">
-            <h3 class="text-xl font-bold mb-2">
-                🕒 Vikariat & Timjobb
-            </h3>
-            <p class="text-[var(--hawk-muted)]">
-                Flexibla uppdrag och tillfälliga anställningar.
-            </p>
-        </a>
-        <a href="/jobhawk/jobbsokare/volontar.html"
-           class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition">
-            <h3 class="text-xl font-bold mb-2">
-                🤝 Volontär & Ideellt
-            </h3>
-            <p class="text-[var(--hawk-muted)]">
-                Gör skillnad samtidigt som du bygger erfarenhet.
-            </p>
-         </a>
-
-        </div>
-
+                <!-- Volontär & Ideellt -->
+                <a href="/jobhawk/jobbsokare/volontar.html" class="bg-[var(--hawk-surface)] border border border-[var(--hawk-line)] rounded-2xl p-6 hover:border-accent transition block">
+                    <h3 class="text-xl font-bold mb-2">
+                        🤝 <span data-i18n="audience_volunteer_title">Volontär & Ideellt</span>
+                    </h3>
+                    <p class="text-[var(--hawk-muted)]" data-i18n="audience_volunteer_desc">
+                        Gör skillnad samtidigt som du bygger erfarenhet.
+                    </p>
+                </a>
+            </div>
         </section>
         <!-- JÄMFÖRELSETABELL -->
         <section id="comparison" class="max-w-4xl mx-auto px-3 sm:px-6 py-12">
