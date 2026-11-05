@@ -214,42 +214,9 @@ en: {
     senior_s3_desc: "Send an application tailored to the job.",
     senior_cta_title: "Start free today",
     senior_cta_desc: "Need more? Pro passes start at 29 kr, with no subscription.",
-}
  }
             };
-            function setLanguage(lang) {
-                localStorage.setItem('jobhawk_lang', lang);
-                document.documentElement.setAttribute('lang', lang);
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-    // SÄKER KONTROLL FÖR ATT UPPDATERA DINA META-TAGGAR PÅ BÅDA SPRÅKEN
-                if (el.tagName === 'META') {
-                el.setAttribute('content', translations[lang][key]);
-                } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.setAttribute('placeholder', translations[lang][key]);
-                } else {
-                el.textContent = translations[lang][key];
-                }
-                }
-            });
-                const svBtn = document.getElementById('lang-sv');
-                const enBtn = document.getElementById('lang-en');
-                if (lang === 'en') {
-                if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-                if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-                } else {
-                if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-                if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-                }
-                }
-                document.addEventListener('DOMContentLoaded', () => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const urlLang = urlParams.get('lang');
-                const savedLang = localStorage.getItem('jobhawk_lang');
-                const selectedLang = urlLang || savedLang || 'sv';
-                setLanguage(selectedLang);
-});
+         });
     </script>
 </body>
 </html>
