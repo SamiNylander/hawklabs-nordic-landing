@@ -1,4 +1,7 @@
 {
   "hero_title": "Hitta jobb, organisera ansökningar och sök smartare",
-  "hero_desc": "JobHawk samlar jobb från flera källor, filtrerar bort dubletter och hjälper dig att hantera hela jobbsökandet från ett och samma ställe."
+  "hero_desc": "JobHawk samlar jobb från flera källor, filtrerar bort dubletter och hjälper dig att hantera hela jobbsökandet från ett och samma ställe.",
+  "hero_badge": "ALLA JOBB. ETT ARBETSFLÖDE.",
+  "find_jobs_heading": "Hitta jobb på ditt sätt",
+  "find_jobs_desc": "JobHawk hjälper olika typer av arbetssökande att hitta rätt möjligheter snabbare."
 }
