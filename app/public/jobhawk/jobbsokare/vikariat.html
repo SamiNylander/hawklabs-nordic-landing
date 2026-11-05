@@ -234,6 +234,19 @@
             vikariat_cta_desc: "Start for free. Need more? Pro passes start at 29 kr, with no subscription."
         }
     };
+    
+    // Byt värde per sida: 'senior', 'ungdom', 'vikariat' eller 'volontar'
+    const PAGE_TARGET = 'vikariat';
+
+    function updateJobhawkLinks(lang) {
+        document.querySelectorAll('a[href^="https://jobhawk.se"]').forEach(a => {
+            const url = new URL(a.href);
+            url.searchParams.set('lang', lang);
+            url.searchParams.set('target', PAGE_TARGET);
+            url.searchParams.set('source', a.closest('header') ? 'logo' : 'cta');
+            a.href = url.toString();
+        });
+    }
 
     function setLanguage(lang) {
         localStorage.setItem('jobhawk_lang', lang);
@@ -258,6 +271,7 @@
         const off = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
         if (svBtn) svBtn.className = lang === 'sv' ? on : off;
         if (enBtn) enBtn.className = lang === 'en' ? on : off;
+        updateJobhawkLinks(lang);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
