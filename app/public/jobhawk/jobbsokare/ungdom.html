@@ -58,7 +58,7 @@
     <!-- NAVIGATION -->
     <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
         <div class="flex items-center gap-3">
-            <a href="https://jobhawk.se/?lang=sv&target=senior&source=logo" class="flex items-center gap-2 font-bold tracking-wider text-lg">
+            <a href="https://jobhawk.se/?lang=sv&target=ungdom&source=logo" class="flex items-center gap-2 font-bold tracking-wider text-lg">
                 <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
                 JOBHAWK
             </a>
@@ -86,7 +86,7 @@
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] max-w-3xl mb-6" data-i18n="ungdom_title">Ditt första jobb börjar här.</h1>
             <p class="text-lg text-[var(--hawk-muted)] max-w-2xl mb-10" data-i18n="ungdom_desc">Hitta sommarjobb, feriejobb och extrajobb på ett ställe, och få hjälp att skriva ett CV och brev som visar vad du kan, även om det är din första ansökan.</p>
             <div class="flex flex-wrap items-center gap-4">
-                <a href="https://jobhawk.se/?lang=sv&target=senior&source=cta" class="bg-accent text-darkbg font-bold px-6 py-3.5 rounded-xl hover:bg-accent-hover transition shadow-lg shadow-accent/20" data-i18n="free_btn">Kom igång gratis</a>
+                <a href="https://jobhawk.se/?lang=sv&target=ungdom&source=cta" class="bg-accent text-darkbg font-bold px-6 py-3.5 rounded-xl hover:bg-accent-hover transition shadow-lg shadow-accent/20" data-i18n="free_btn">Kom igång gratis</a>
             </div>
         </div>
     </section>
@@ -242,7 +242,7 @@
     };
 <script>
     // Byt värde per sida: 'senior', 'ungdom', 'vikariat' eller 'volontar'
-    const PAGE_TARGET = 'senior';
+    const PAGE_TARGET = 'ungdom';
 
     function updateJobhawkLinks(lang) {
         document.querySelectorAll('a[href^="https://jobhawk.se"]').forEach(a => {
