@@ -23,3 +23,17 @@ async function loadLanguage(lang) {
 
         });
 }
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const savedLanguage =
+            localStorage.getItem(
+                "jobhawk_lang"
+            ) || "sv";
+
+        loadLanguage(
+            savedLanguage
+        );
+    }
+);
