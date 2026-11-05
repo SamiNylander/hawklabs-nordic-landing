@@ -14,4 +14,141 @@
             color: var(--hawk-white);
             font-family: Inter, "Segoe UI", Arial, sans-serif;
         }
-    
+        /* Bakgrundsglöd bakom Pro-kortet */
+    .hk-pricing { position: relative; isolation: isolate; }
+    .hk-pricing::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+            radial-gradient(520px 340px at 70% 55%, rgba(0, 229, 255, .09), transparent 70%),
+            radial-gradient(420px 300px at 85% 85%, rgba(99, 102, 241, .08), transparent 70%);
+        pointer-events: none;
+    }
+
+    /* Gratiskortet: dämpat, tunn ram */
+    .hk-free {
+        background: rgba(11, 17, 32, .6);
+        border: 1px solid rgba(177, 195, 222, .1);
+    }
+
+    /* Pro-kortet: större, gradientram, mjuk glöd */
+    .hk-pro {
+        position: relative;
+        background: linear-gradient(180deg, #0d1627 0%, #08101e 100%);
+        border: 1px solid transparent;
+        box-shadow: 0 30px 80px -30px rgba(0, 229, 255, .28);
+    }
+    .hk-pro::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        padding: 1.5px;
+        border-radius: inherit;
+        background: linear-gradient(120deg, #00e5ff, #3b82f6, #8b5cf6, #00e5ff);
+        background-size: 300% 300%;
+        animation: hk-flow 10s linear infinite;
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+        pointer-events: none;
+    }
+    @keyframes hk-flow {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 300% 50%; }
+    }
+    @media (min-width: 768px) {
+        .hk-pro { transform: scale(1.035); }
+    }
+
+    /* Ikoner i funktionslistorna */
+    .hk-ico { width: 18px; height: 18px; flex: none; }
+    .hk-ico-free { color: rgba(148, 163, 184, .7); }
+    .hk-ico-pro  { color: #00e5ff; }
+
+    /* Prisval */
+    .hk-opt {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .85rem;
+        width: 100%;
+        padding: .9rem 1rem;
+        border-radius: .9rem;
+        border: 1px solid var(--hawk-line);
+        background: var(--hawk-surface-raised);
+        color: #fff;
+        text-align: left;
+        cursor: pointer;
+        transition: border-color .2s, background .2s, box-shadow .2s, transform .2s;
+    }
+    .hk-opt:hover { border-color: rgba(0, 229, 255, .45); transform: translateY(-1px); }
+    .hk-opt:focus-visible { outline: 2px solid #00e5ff; outline-offset: 2px; }
+    .hk-opt[aria-checked="true"] {
+        border-color: #00e5ff;
+        background: rgba(0, 229, 255, .08);
+        box-shadow: 0 10px 28px -14px rgba(0, 229, 255, .55);
+    }
+    .hk-dot {
+        width: 18px; height: 18px; flex: none;
+        border-radius: 999px;
+        border: 2px solid rgba(148, 163, 184, .5);
+        display: grid; place-items: center;
+        transition: border-color .2s;
+    }
+    .hk-dot::after {
+        content: "";
+        width: 8px; height: 8px;
+        border-radius: 999px;
+        background: #00e5ff;
+        transform: scale(0);
+        transition: transform .2s;
+    }
+    .hk-opt[aria-checked="true"] .hk-dot { border-color: #00e5ff; }
+    .hk-opt[aria-checked="true"] .hk-dot::after { transform: scale(1); }
+
+    .hk-opt-name  { display: block; font-weight: 700; font-size: .95rem; }
+    .hk-opt-sub   { display: block; font-size: .75rem; color: var(--hawk-muted); margin-top: 1px; }
+    .hk-opt-price { margin-left: auto; font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
+    .hk-opt-price small { font-size: .75rem; font-weight: 600; color: var(--hawk-muted); margin-left: 2px; }
+
+    .hk-tag {
+        position: absolute;
+        top: -.6rem;
+        right: 1rem;
+        padding: .15rem .55rem;
+        border-radius: 999px;
+        font-size: .65rem;
+        font-weight: 800;
+        letter-spacing: .03em;
+        background: #00e5ff;
+        color: #050811;
+    }
+    .hk-tag-soft {
+        background: #10192b;
+        color: #00e5ff;
+        border: 1px solid rgba(0, 229, 255, .45);
+    }
+
+    /* Köpknapp */
+    .hk-cta {
+        display: block;
+        width: 100%;
+        padding: .95rem 1rem;
+        border-radius: .9rem;
+        text-align: center;
+        font-weight: 800;
+        font-size: .95rem;
+        background: linear-gradient(135deg, #00e5ff, #38bdf8);
+        color: #050811;
+        box-shadow: 0 12px 30px -12px rgba(0, 229, 255, .7);
+        transition: transform .2s, box-shadow .2s, filter .2s;
+    }
+    .hk-cta:hover { transform: translateY(-1px); filter: brightness(1.06); box-shadow: 0 16px 36px -12px rgba(0, 229, 255, .85); }
+    .hk-cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hk-pro::before { animation: none; }
+        .hk-opt, .hk-cta, .hk-dot::after { transition: none; }
+    }
