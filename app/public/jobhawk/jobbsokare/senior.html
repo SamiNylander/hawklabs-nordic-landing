@@ -165,56 +165,111 @@
         </div>
     </footer>
 <script>
-        const translations = {
-sv: {
-    senior_meta_title: "Jobb för seniorer 55+ | JobHawk",
-    senior_meta_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller på ett ställe.",
-    senior_badge: "Senior 55+",
-    senior_title: "Jobb som tar din erfarenhet på allvar.",
-    senior_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller på ett ställe, utan algoritmer som gallrar bort dig på grund av ålder.",
-    senior_see_prices: "Se priser",
-    senior_why_heading: "Byggt för dig med lång erfarenhet",
-    senior_p1_title: "Erfarenheten först",
-    senior_p1_desc: "Du ser relevanta jobb utifrån vad du kan, och får hjälp att lyfta fram det i ansökan.",
-    senior_p2_title: "Fler vägar än heltid",
-    senior_p2_desc: "Konsultuppdrag, deltid och vikariat från flera källor, utan dubletter.",
-    senior_p3_title: "Ansökningar som passar annonsen",
-    senior_p3_desc: "Anpassa CV och personligt brev till varje jobb, utan att börja om varje gång.",
-    senior_how_heading: "Så här fungerar det",
-    senior_s1_title: "Hitta",
-    senior_s1_desc: "Svep bland jobb som passar dig.",
-    senior_s2_title: "Spara",
-    senior_s2_desc: "Samla dina favoriter i din egen pipeline.",
-    senior_s3_title: "Ansök",
-    senior_s3_desc: "Skicka en ansökan som är anpassad till jobbet.",
-    senior_cta_title: "Börja gratis i dag",
-    senior_cta_desc: "Behöver du mer finns Pro-pass från 29 kr, utan prenumeration.",
-},
+    const translations = {
+        sv: {
+            // Header, knappar och footer (delas med huvudsidan)
+            nav_home: "HawkLabs",
+            nav_comparison: "Jämförelse",
+            nav_pricing: "Priser",
+            free_btn: "Kom igång gratis",
+            footer_rights: "Alla rättigheter förbehållna.",
+            footer_about: "Om oss",
+            footer_terms: "Användarvillkor",
+            footer_cookies: "Kakor",
+            footer_privacy: "Privacy Policy",
+            footer_contact: "Kontakt",
 
-en: {
-    senior_meta_title: "Jobs for seniors 55+ | JobHawk",
-    senior_meta_desc: "Find senior-friendly jobs, consulting assignments and part-time roles in one place.",
-    senior_badge: "Senior 55+",
-    senior_title: "Jobs that take your experience seriously.",
-    senior_desc: "Find senior-friendly jobs, consulting assignments and part-time roles in one place, without algorithms filtering you out because of age.",
-    senior_see_prices: "See pricing",
-    senior_why_heading: "Built for people with long experience",
-    senior_p1_title: "Experience first",
-    senior_p1_desc: "See relevant jobs based on what you can do, and get help highlighting it in your application.",
-    senior_p2_title: "More paths than full-time",
-    senior_p2_desc: "Consulting, part-time and temporary roles from multiple sources, without duplicates.",
-    senior_p3_title: "Applications that fit the ad",
-    senior_p3_desc: "Tailor your CV and cover letter to each job, without starting over every time.",
-    senior_how_heading: "How it works",
-    senior_s1_title: "Find",
-    senior_s1_desc: "Swipe through jobs that suit you.",
-    senior_s2_title: "Save",
-    senior_s2_desc: "Collect your favorites in your own pipeline.",
-    senior_s3_title: "Apply",
-    senior_s3_desc: "Send an application tailored to the job.",
-    senior_cta_title: "Start free today",
-    senior_cta_desc: "Need more? Pro passes start at 29 kr, with no subscription.",
- }
-    </script>
+            // Senior-sidan
+            senior_meta_title: "Jobb för seniorer 55+ | JobHawk",
+            senior_meta_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller på ett ställe.",
+            senior_badge: "Senior 55+",
+            senior_title: "Jobb som tar din erfarenhet på allvar.",
+            senior_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller på ett ställe, utan algoritmer som gallrar bort dig på grund av ålder.",
+            senior_see_prices: "Se priser",
+            senior_why_heading: "Byggt för dig med lång erfarenhet",
+            senior_p1_title: "Erfarenheten först",
+            senior_p1_desc: "Du ser relevanta jobb utifrån vad du kan, och får hjälp att lyfta fram det i ansökan.",
+            senior_p2_title: "Fler vägar än heltid",
+            senior_p2_desc: "Konsultuppdrag, deltid och vikariat från flera källor, utan dubletter.",
+            senior_p3_title: "Ansökningar som passar annonsen",
+            senior_p3_desc: "Anpassa CV och personligt brev till varje jobb, utan att börja om varje gång.",
+            senior_how_heading: "Så här fungerar det",
+            senior_s1_title: "Hitta",
+            senior_s1_desc: "Svep bland jobb som passar dig.",
+            senior_s2_title: "Spara",
+            senior_s2_desc: "Samla dina favoriter i din egen pipeline.",
+            senior_s3_title: "Ansök",
+            senior_s3_desc: "Skicka en ansökan som är anpassad till jobbet.",
+            senior_cta_title: "Börja gratis i dag",
+            senior_cta_desc: "Behöver du mer finns Pro-pass från 29 kr, utan prenumeration."
+        },
+        en: {
+            nav_home: "HawkLabs",
+            nav_comparison: "Comparison",
+            nav_pricing: "Pricing",
+            free_btn: "Get started for free",
+            footer_rights: "All rights reserved.",
+            footer_about: "About Us",
+            footer_terms: "Terms of Use",
+            footer_cookies: "Cookies",
+            footer_privacy: "Privacy Policy",
+            footer_contact: "Contact",
+
+            senior_meta_title: "Jobs for seniors 55+ | JobHawk",
+            senior_meta_desc: "Find senior-friendly jobs, consulting assignments and part-time roles in one place.",
+            senior_badge: "Senior 55+",
+            senior_title: "Jobs that take your experience seriously.",
+            senior_desc: "Find senior-friendly jobs, consulting assignments and part-time roles in one place, without algorithms filtering you out because of age.",
+            senior_see_prices: "See pricing",
+            senior_why_heading: "Built for people with long experience",
+            senior_p1_title: "Experience first",
+            senior_p1_desc: "See relevant jobs based on what you can do, and get help highlighting it in your application.",
+            senior_p2_title: "More paths than full-time",
+            senior_p2_desc: "Consulting, part-time and temporary roles from multiple sources, without duplicates.",
+            senior_p3_title: "Applications that fit the ad",
+            senior_p3_desc: "Tailor your CV and cover letter to each job, without starting over every time.",
+            senior_how_heading: "How it works",
+            senior_s1_title: "Find",
+            senior_s1_desc: "Swipe through jobs that suit you.",
+            senior_s2_title: "Save",
+            senior_s2_desc: "Collect your favorites in your own pipeline.",
+            senior_s3_title: "Apply",
+            senior_s3_desc: "Send an application tailored to the job.",
+            senior_cta_title: "Start free today",
+            senior_cta_desc: "Need more? Pro passes start at 29 kr, with no subscription."
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('jobhawk_lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                if (el.tagName === 'META') {
+                    el.setAttribute('content', translations[lang][key]);
+                } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.setAttribute('placeholder', translations[lang][key]);
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            }
+        });
+
+        const svBtn = document.getElementById('lang-sv');
+        const enBtn = document.getElementById('lang-en');
+        const on = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+        const off = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+        if (svBtn) svBtn.className = lang === 'sv' ? on : off;
+        if (enBtn) enBtn.className = lang === 'en' ? on : off;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        const savedLang = localStorage.getItem('jobhawk_lang');
+        setLanguage(urlLang || savedLang || 'sv');
+    });
+</script>
 </body>
 </html>
