@@ -235,72 +235,148 @@
         </div>
     </div>
 </section>
-        <!-- PRICING SECTION -->
-        <section id="pricing" class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="pricing_heading">Flexibla pass för dina behov</h2>
-                <p class="text-[var(--hawk-muted)]" data-i18n="pricing_sub">Engångsköp utan dolda prenumerationsfällor när du söker aktivt.</p>
+       <!-- Ikoner (osynlig sprite, används med <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="hk-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9.5" opacity=".35"/>
+        <path d="M8 12.5l2.7 2.7L16 9.5"/>
+    </symbol>
+</svg>
+
+<!-- PRICING SECTION -->
+<section id="pricing" class="hk-pricing max-w-5xl mx-auto px-4 sm:px-6 py-20">
+    <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight" data-i18n="pricing_heading">Välj din takt</h2>
+        <p class="text-[var(--hawk-muted)] max-w-xl mx-auto" data-i18n="pricing_sub">Engångsköp utan dolda prenumerationsfällor.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+
+        <!-- Gratisversion -->
+        <div class="hk-free rounded-2xl p-8 flex flex-col justify-between">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-[var(--hawk-muted)] bg-[var(--hawk-surface-raised)] px-3 py-1 rounded-full" data-i18n="free_badge">Standard</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2" data-i18n="free_title">Gratisversionen</h3>
+                <p class="text-sm text-[var(--hawk-muted)] mb-6" data-i18n="free_desc">Perfekt för dig som vill komma igång direkt utan kostnad.</p>
+                <ul class="space-y-3.5 text-sm text-[var(--hawk-muted)] mb-8">
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-free"><use href="#hk-check"/></svg><span data-i18n="free_f1">Skapa och skicka din första ansökan</span></li>
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-free"><use href="#hk-check"/></svg><span data-i18n="free_f2">Grundläggande jobbmatchning</span></li>
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-free"><use href="#hk-check"/></svg><span data-i18n="free_f3">Titta på belöningsvideo för extra tidsbesparingar</span></li>
+                </ul>
+            </div>
+            <a href="https://jobhawk.se" class="block w-full border border-[var(--hawk-line)] text-center font-bold py-3 rounded-xl hover:bg-[var(--hawk-surface-raised)] transition text-sm" data-i18n="free_btn">
+                Kom igång gratis
+            </a>
+        </div>
+
+        <!-- Pro Pass -->
+        <div class="hk-pro rounded-2xl p-8 flex flex-col justify-between">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full" data-i18n="pro_badge">Pro Pass</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2" data-i18n="pro_title">3, 7 eller 30 dagar</h3>
+                <p class="text-sm text-[var(--hawk-muted)] mb-6" data-i18n="pro_desc">Full kraft i jobbsökandet, i precis så lång tid du behöver.</p>
+                <ul class="space-y-3.5 text-sm mb-8">
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-pro"><use href="#hk-check"/></svg><span data-i18n="pro_f1">100 % reklamfritt gränssnitt</span></li>
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-pro"><use href="#hk-check"/></svg><span data-i18n="pro_f2">Obegränsade rena PDF-nedladdningar (utan vattenstämpel)</span></li>
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-pro"><use href="#hk-check"/></svg><span data-i18n="pro_f3">Personlig karriärcoach (20 meddelanden/dag)</span></li>
+                    <li class="flex items-center gap-3"><svg class="hk-ico hk-ico-pro"><use href="#hk-check"/></svg><span data-i18n="pro_f4">Ansökningspipeline & smarta uppföljningar</span></li>
+                </ul>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-stretch">
-                <!-- Gratisversion -->
-                <div class="bg-[var(--hawk-surface)] border border-[var(--hawk-line)] rounded-2xl p-8 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-[var(--hawk-muted)] bg-[var(--hawk-surface-raised)] px-3 py-1 rounded-full" data-i18n="free_badge">Standard</span>
-                        <h3 class="text-2xl font-bold mt-4 mb-2" data-i18n="free_title">Gratisversionen</h3>
-                        <p class="text-sm text-[var(--hawk-muted)] mb-6" data-i18n="free_desc">Perfekt för dig som vill komma igång direkt utan kostnad.</p>
-                        <ul class="space-y-3 text-sm text-[var(--hawk-muted)] mb-8">
-                            <li class="flex items-center gap-2">✓ <span data-i18n="free_f1">Skapa och skicka din första ansökan</span></li>
-                            <li class="flex items-center gap-2">✓ <span data-i18n="free_f2">Grundläggande jobbmatchning</span></li>
-                            <li class="flex items-center gap-2">✓ <span data-i18n="free_f3">Titta på belöningsvideo för extra tidsbesparingar</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://jobhawk.se" class="block w-full border border-[var(--hawk-line)] text-center font-bold py-3 rounded-xl hover:bg-[var(--hawk-surface-raised)] transition text-sm" data-i18n="free_btn">
-                        Kom igång gratis
-                    </a>
+            <div class="pt-5 border-t border-[var(--hawk-line)]">
+                <div class="text-xs text-center text-[var(--hawk-muted)] font-medium mb-4" data-i18n="select_validity">Välj giltighetstid:</div>
+
+                <!-- Prisval (väljs här, köps med knappen under) -->
+                <div id="hk-options" role="radiogroup" class="space-y-3 mb-5">
+
+                    <button type="button" role="radio" aria-checked="false" class="hk-opt"
+                            data-href="https://buy.stripe.com/8x28wI5hy3f72CadO7f7i02">
+                        <span class="hk-dot"></span>
+                        <span>
+                            <span class="hk-opt-name" data-i18n="plan_3d">3 dagar</span>
+                            <span class="hk-opt-sub" data-i18n="per_day_3d">≈ 9,7 kr/dag</span>
+                        </span>
+                        <span class="hk-opt-price">29<small>kr</small></span>
+                    </button>
+
+                    <button type="button" role="radio" aria-checked="true" class="hk-opt"
+                            data-href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03">
+                        <span class="hk-tag" data-i18n="pro_pop">Populärast</span>
+                        <span class="hk-dot"></span>
+                        <span>
+                            <span class="hk-opt-name" data-i18n="plan_7d">7 dagar</span>
+                            <span class="hk-opt-sub" data-i18n="per_day_7d">7 kr/dag</span>
+                        </span>
+                        <span class="hk-opt-price">49<small>kr</small></span>
+                    </button>
+
+                    <button type="button" role="radio" aria-checked="false" class="hk-opt"
+                            data-href="https://buy.stripe.com/aFa14gfWceXP7WudO7f7i01">
+                        <span class="hk-tag hk-tag-soft" data-i18n="best_value">Bäst värde</span>
+                        <span class="hk-dot"></span>
+                        <span>
+                            <span class="hk-opt-name" data-i18n="plan_30d">30 dagar</span>
+                            <span class="hk-opt-sub" data-i18n="per_day_30d">≈ 2,6 kr/dag</span>
+                        </span>
+                        <span class="hk-opt-price">79<small>kr</small></span>
+                    </button>
                 </div>
 
-                <!-- Pro Pass (Med Populärast på 7 dagar) -->
-                <div class="bg-gradient-to-b from-[var(--hawk-surface)] to-[#08101e] border-2 border-accent rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-accent/10">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full" data-i18n="pro_badge">Pro Pass</span>
-                        <h3 class="text-2xl font-bold mt-4 mb-2" data-i18n="pro_title">3, 7 eller 30 dagar</h3>
-                        <p class="text-sm text-[var(--hawk-muted)] mb-6" data-i18n="pro_desc">Engångsköp utan dolda prenumerationsfällor när du söker aktivt.</p>
-                        <ul class="space-y-3 text-sm mb-8">
-                            <li class="flex items-center gap-2">✨ <span data-i18n="pro_f1">100 % reklamfritt gränssnitt</span></li>
-                            <li class="flex items-center gap-2">✨ <span data-i18n="pro_f2">Obegränsade rena PDF-nedladdningar (utan vattenstämpel)</span></li>
-                            <li class="flex items-center gap-2">✨ <span data-i18n="pro_f3">Personlig karriärcoach (20 meddelanden/dag)</span></li>
-                            <li class="flex items-center gap-2">✨ <span data-i18n="pro_f4">Ansökningspipeline & smarta uppföljningar</span></li>
-                        </ul>
-                    </div>
+                <!-- Köpknapp: uppdateras av valet -->
+                <a id="hk-cta" href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03" target="_blank" rel="noopener" class="hk-cta">
+                    <span data-i18n="cta_activate">Aktivera</span> <span id="hk-cta-plan">7 dagar — 49 kr</span>
+                </a>
 
-                    <!-- Stripe Prisknappar (Populärast på 7-dagars) -->
-                    <div class="space-y-2.5 pt-2 border-t border-[var(--hawk-line)]">
-                        <div class="text-xs text-center text-[var(--hawk-muted)] font-medium mb-1" data-i18n="select_validity">Välj giltighetstid:</div>
-                        
-                        <!-- 3 Dagar -->
-                        <a href="https://buy.stripe.com/8x28wI5hy3f72CadO7f7i02" target="_blank" class="block w-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-white font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent hover:text-darkbg transition text-sm">
-                            <span data-i18n="btn_3d">3 Dagar Pro — 29 kr</span>
-                        </a>
-
-                        <!-- 7 Dagar (Populärast) -->
-                        <div class="relative">
-                            <span class="absolute -top-2.5 right-4 bg-accent text-darkbg text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow" data-i18n="pro_pop">
-                                Populärast
-                            </span>
-                            <a href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03" target="_blank" class="block w-full bg-accent text-darkbg font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent-hover transition text-sm shadow-md">
-                                <span data-i18n="btn_7d">7 Dagar Pro — 49 kr</span>
-                            </a>
-                        </div>
-
-                        <!-- 30 Dagar -->
-                        <a href="https://buy.stripe.com/aFa14gfWceXP7WudO7f7i01" target="_blank" class="block w-full bg-[var(--hawk-surface-raised)] border border-[var(--hawk-line)] text-white font-bold py-2.5 px-4 rounded-xl text-center hover:bg-accent hover:text-darkbg transition text-sm">
-                            <span data-i18n="btn_30d">30 Dagar Pro — 79 kr</span>
-                        </a>
-                    </div>
-                </div>
+                <p class="mt-4 text-center text-xs text-[var(--hawk-muted)]" data-i18n="trust_line">
+                    Engångsbetalning, ingen automatisk förnyelse. Säker betalning via Stripe.
+                </p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+<script>
+(function () {
+    const group = document.getElementById('hk-options');
+    const cta = document.getElementById('hk-cta');
+    const ctaPlan = document.getElementById('hk-cta-plan');
+    if (!group || !cta || !ctaPlan) return;
+    const opts = Array.from(group.querySelectorAll('.hk-opt'));
+
+    function updateCta() {
+        const sel = group.querySelector('.hk-opt[aria-checked="true"]');
+        if (!sel) return;
+        const name = sel.querySelector('.hk-opt-name').textContent.trim();
+        const price = sel.querySelector('.hk-opt-price').textContent.trim().replace(/(\d)(kr)/i, '$1 $2');
+        const text = name + ' — ' + price;
+        if (ctaPlan.textContent !== text) ctaPlan.textContent = text;
+        cta.href = sel.dataset.href;
+    }
+
+    function select(opt) {
+        opts.forEach(o => {
+            o.setAttribute('aria-checked', o === opt ? 'true' : 'false');
+            o.tabIndex = o === opt ? 0 : -1;
+        });
+        updateCta();
+    }
+
+    opts.forEach((o, i) => {
+        o.addEventListener('click', () => select(o));
+        o.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); opts[(i + 1) % opts.length].focus(); select(opts[(i + 1) % opts.length]); }
+            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); opts[(i - 1 + opts.length) % opts.length].focus(); select(opts[(i - 1 + opts.length) % opts.length]); }
+        });
+    });
+
+    // Håller köpknappen i takt när språket växlas (setLanguage skriver om texterna)
+    new MutationObserver(updateCta).observe(group, { childList: true, characterData: true, subtree: true });
+
+    select(group.querySelector('[aria-checked="true"]') || opts[0]);
+})();
+</script>
+
+
+<!--
     </main>
 
     <!-- FOOTER MED JURIDISKA LÄNKAR -->
@@ -373,27 +449,15 @@
                 val_auto: "✨ Automatisk",
 
                 // Prissättning
-                pricing_heading: "Flexibla pass för dina behov",
-                pricing_sub: "Engångsköp utan dolda prenumerationsfällor när du söker aktivt.",
-                free_badge: "Standard",
-                free_title: "Gratisversionen",
-                free_desc: "Perfekt för dig som vill komma igång direkt utan kostnad.",
-                free_f1: "Skapa och skicka din första ansökan",
-                free_f2: "Grundläggande datamatchning",
-                free_f3: "Titta på belöningsvideo för extra tidsbesparingar",
-                free_btn: "Kom igång gratis",
-                pro_pop: "Populärast",
-                pro_badge: "Pro Pass",
-                pro_title: "3, 7 eller 30 dagar",
-                pro_desc: "Engångsköp utan dolda prenumerationsfällor när du söker aktivt.",
-                pro_f1: "100 % reklamfritt gränssnitt",
-                pro_f2: "Obegränsade rena PDF-nedladdningar (utan vattenstämpel)",
-                pro_f3: "Personlig karriärcoach (20 meddelanden/dag)",
-                pro_f4: "Ansökningspipeline & smarta uppföljningar",
-                select_validity: "Välj giltighetstid:",
-                btn_3d: "3 Dagar Pro — 29 kr",
-                btn_7d: "7 Dagar Pro — 49 kr",
-                btn_30d: "30 Dagar Pro — 79 kr",
+                plan_3d: "3 dagar",
+                plan_7d: "7 dagar",
+                plan_30d: "30 dagar",
+                per_day_3d: "≈ 9,7 kr/dag",
+                per_day_7d: "7 kr/dag",
+                per_day_30d: "≈ 2,6 kr/dag",
+                best_value: "Bäst värde",
+                cta_activate: "Aktivera",
+                trust_line: "Engångsbetalning, ingen automatisk förnyelse. Säker betalning via Stripe.",
                 footer_rights: "Alla rättigheter förbehållna.",
                 footer_about: "Om oss",
                 footer_terms: "Användarvillkor",
@@ -454,15 +518,15 @@
                 val_auto: "✨ Automatic",
 
                 // Pricing
-                pricing_heading: "Flexible passes for your needs",
-                pricing_sub: "One-time purchases with zero hidden subscription traps while actively hunting.",
-                free_badge: "Standard",
-                free_title: "Free Version",
-                free_desc: "Perfect for those who want to get started right away at no cost.",
-                free_f1: "Create and send your first application",
-                free_f2: "Basic data matching",
-                free_f3: "Watch a reward video for extra time-savers",
-                free_btn: "Get started for free",
+                plan_3d: "3 days",
+                plan_7d: "7 days",
+                plan_30d: "30 days",
+                per_day_3d: "≈ 9.7 kr/day",
+                per_day_7d: "7 kr/day",
+                per_day_30d: "≈ 2.6 kr/day",
+                best_value: "Best value",
+                cta_activate: "Activate",
+                trust_line: "One-time payment, no automatic renewal. Secure checkout via Stripe.",
                 pro_pop: "Most Popular",
                 pro_badge: "Pro Pass",
                 pro_title: "3, 7 or 30 days",
