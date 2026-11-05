@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050811">
+    <title data-i18n="meta_title">JobHawk – AI-driven karriärplattform</title>
+    <meta name="description" content="Förenkla ditt jobbsökande med smart AI-matchning och professionella verktyg.">
+    <link rel="canonical" href="?lang=sv">
+    <link rel="alternate" hreflang="sv" href="?lang=sv">
+    <link rel="alternate" hreflang="en" href="?lang=en">
+    <link rel="alternate" hreflang="x-default" href="?lang=sv">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hawkbg: '#050811',
+                        surface: '#0b1120',
+                        surfaceraised: '#10192b',
+                        accent: '#00e5ff',
+                        'accent-hover': '#00b8cc',
+                        darkbg: '#050811'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            color-scheme: dark;
+            --hawk-bg: #050811;
+            --hawk-surface: #0b1120;
+            --hawk-surface-raised: #10192b;
+            --hawk-blue: #00e5ff;
+            --hawk-white: #f7f8fb;
+            --hawk-muted: #94a3b8;
+            --hawk-line: rgba(177, 195, 222, 0.15);
+            --hawk-green: #55f2b1;
+        }
+        body {
+            background-color: var(--hawk-bg);
+            color: var(--hawk-white);
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+        }
+    </style>
+    <script>
+        if (window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-accent selection:text-darkbg overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <header class="w-full border-b border-[var(--hawk-line)] py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-md sticky top-0 z-50 bg-[#050811]/80">
+        <div class="flex items-center gap-3">
+            <a href="https://jobhawk.se" class="flex items-center gap-2 font-bold tracking-wider text-lg">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
+                JOBHAWK
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--hawk-muted)]">
+            <a href="https://hawklabsnordic.se" class="hover:text-white transition" data-i18n="nav_home">HawkLabs</a>
+            <a href="#comparison" class="hover:text-white transition" data-i18n="nav_comparison">Jämförelse</a>
+            <a href="#pricing" class="hover:text-white transition" data-i18n="nav_pricing">Priser</a>
+        </nav>
+        <!-- Språkväljare med flaggor -->
+        <div class="flex items-center gap-2 text-xs">
+            <a href="?lang=sv" id="lang-sv" class="px-2.5 py-1 rounded font-bold transition">🇸🇪 Svenska</a>
+            <span class="text-gray-600">|</span>
+            <a href="?lang=en" id="lang-en" class="px-2.5 py-1 rounded font-bold transition">🇬🇧 English</a>
+        </div>
+    </header>
