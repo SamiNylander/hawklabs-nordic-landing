@@ -318,43 +318,68 @@
         </div>
     </footer>
 
-    <!-- SPRÅKLOGIK OCH ÖVERSÄTTNINGAR -->
+<!-- SPRÅKLOGIK OCH ÖVERSÄTTNINGAR -->
     <script>
         const translations = {
             sv: {
-                meta_title: "JobHawk – AI-driven karriärplattform",
+                meta_title: "JobHawk – Hitta jobb, organisera ansökningar",
                 nav_home: "HawkLabs",
                 nav_comparison: "Jämförelse",
                 nav_pricing: "Priser",
-                hero_tag: "AI-DRIVEN KARRIÄRPLATTFORM",
-                hero_title: "Förenkla ditt jobbsökande och nå målet snabbare",
-                hero_desc: "JobHawk matchar din profil, strukturerar dina ansökningar och ger dig verktygen som krävs för att sticka ut i mängden.",
+                hero_badge: "PROPRIETÄR DATASTRUKTUR & SMART ASSISTANS",
+                hero_title: "ALLA JOBB. ETT ARBETSFLÖDE.",
+                hero_title_sub: "Hitta jobb, organisera ansökningar och sök smartare.",
+                hero_desc: "JobHawk samlar jobb från flera källor, filtrerar bort dubletter och hjälper dig att hantera hela jobbsökandet från ett och samma ställe. Plattformen drivs av 75% stabil, egenutvecklad logik och 25% smart AI-stöd för textoptimering.",
                 btn_get_started: "Kom igång direkt →",
+                
+                // Målgrupps-sektionen
+                audiences_heading: "Skräddarsytt för alla vägar i arbetslivet",
+                audiences_sub: "JobHawk hjälper olika typer av arbetssökande att navigera rätt och nå sina mål snabbare.",
+                audience_senior_title: "Senior 55+",
+                audience_senior_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller utan algoritmer som gallrar bort dig baserat på ålder.",
+                audience_youth_title: "Ungdom 15–17 år",
+                audience_youth_desc: "Smidig filtrering för sommarjobb, feriejobb och extrajobb anpassade för dig som ska ta dina första steg i arbetslivet.",
+                audience_flex_title: "Vikariat & Timjobb",
+                audience_flex_desc: "Hitta flexibla uppdrag, snabba insteg och tillfälliga anställningar strukturerade direkt i din personliga pipeline.",
+                audience_volunteer_title: "Volontär & Ideellt",
+                audience_volunteer_desc: "Bygg värdefull praktisk erfarenhet till din meritförteckning samtidigt som du gör en verklig skillnad i samhället.",
+
+                // Fördelar-sektionen
+                why_heading: "Varför JobHawk?",
+                why1: "Jobb från flera källor",
+                why2: "Färre dubletter",
+                why3: "Svep bland relevanta jobb",
+                why4: "Bygg din egen jobbpipeline",
+                why5: "Anpassa CV och personliga brev",
+                why6: "Ett arbetsflöde för hela jobbsökandet",
+
+                // Jämförelsetabell
                 comp_heading: "ChatGPT vs JobHawk",
-                comp_sub: "Se varför en specialiserad plattform gör hela skillnaden för ditt jobbsökande.",
-                th_feature: "Funktion",
+                comp_sub: "Se varför en dedikerad datastruktur och ett sammanhängande flöde gör hela skillnaden.",
+                th_feature: "Funktion / Infrastruktur",
                 th_chatgpt: "ChatGPT",
                 th_jobhawk: "JobHawk",
-                row1_f: "Hjälper dig skriva CV",
+                row1_f: "Hjälper dig skriva & optimera CV",
                 row2_f: "Hjälper dig skriva personligt brev",
-                row3_f: "Hittar relevanta jobb automatiskt",
-                row4_f: "Samlar jobb från flera källor",
-                row5_f: "Matchar ditt CV mot jobbannonser",
-                row6_f: "Anpassar CV för varje jobb",
-                row7_f: "Anpassar personligt brev för varje jobb",
-                row8_f: "Hanterar flera jobb samtidigt",
-                row9_f: "Ett arbetsflöde för hela jobbsökandet",
-                row10_f: "Byggt specifikt för nordiska arbetssökande",
+                row3_f: "Aggregerar & hittar jobb automatiskt",
+                row4_f: "Hämtar och tvättar data från flera källor",
+                row5_f: "Automatiskt rensade dubletter i flödet",
+                row6_f: "Kontextuell matchning mot annonskrav",
+                row7_f: "Hanterar flera jobb parallellt i en pipeline",
+                row8_f: "Ett sammanhängande arbetsflöde",
+                row9_f: "Byggt specifikt för nordiska arbetssökande",
                 val_partial: "Delvis",
                 val_manual: "Manuellt",
-                val_auto: "✨ Automatiskt",
+                val_auto: "✨ Automatisk",
+
+                // Prissättning
                 pricing_heading: "Flexibla pass för dina behov",
                 pricing_sub: "Engångsköp utan dolda prenumerationsfällor när du söker aktivt.",
                 free_badge: "Standard",
                 free_title: "Gratisversionen",
                 free_desc: "Perfekt för dig som vill komma igång direkt utan kostnad.",
                 free_f1: "Skapa och skicka din första ansökan",
-                free_f2: "Grundläggande AI-matchning",
+                free_f2: "Grundläggande datamatchning",
                 free_f3: "Titta på belöningsvideo för extra tidsbesparingar",
                 free_btn: "Kom igång gratis",
                 pro_pop: "Populärast",
@@ -363,7 +388,7 @@
                 pro_desc: "Engångsköp utan dolda prenumerationsfällor när du söker aktivt.",
                 pro_f1: "100 % reklamfritt gränssnitt",
                 pro_f2: "Obegränsade rena PDF-nedladdningar (utan vattenstämpel)",
-                pro_f3: "Personlig AI-karriärcoach (20 meddelanden/dag)",
+                pro_f3: "Personlig karriärcoach (20 meddelanden/dag)",
                 pro_f4: "Ansökningspipeline & smarta uppföljningar",
                 select_validity: "Välj giltighetstid:",
                 btn_3d: "3 Dagar Pro — 29 kr",
@@ -377,39 +402,64 @@
                 footer_contact: "Kontakt"
             },
             en: {
-                meta_title: "JobHawk – AI-Driven Career Platform",
+                meta_title: "JobHawk – Find jobs, organize applications",
                 nav_home: "HawkLabs",
                 nav_comparison: "Comparison",
                 nav_pricing: "Pricing",
-                hero_tag: "AI-DRIVEN CAREER PLATFORM",
-                hero_title: "Streamline your job search and reach your goals faster",
-                hero_desc: "JobHawk matches your profile, structures your applications, and gives you the tools needed to stand out from the crowd.",
+                hero_badge: "PROPRIETARY DATA STRUCTURE & SMART ASSISTANCE",
+                hero_title: "ALL JOBS. ONE WORKFLOW.",
+                hero_title_sub: "Find jobs, organize applications, and search smarter.",
+                hero_desc: "JobHawk collects jobs from multiple sources, filters out duplicates, and helps you manage your entire job search from one place. The platform is powered by 75% stable, custom-built logic and 25% smart AI support for text optimization.",
                 btn_get_started: "Get started now →",
+                
+                // Audiences Section
+                audiences_heading: "Tailored for all paths in working life",
+                audiences_sub: "JobHawk helps different types of job seekers navigate correctly and reach their goals faster.",
+                audience_senior_title: "Senior 55+",
+                audience_senior_desc: "Find senior-friendly jobs, consulting assignments, and part-time roles without algorithms filtering you out based on age.",
+                audience_youth_title: "Youth 15–17 years",
+                audience_youth_desc: "Easy filtering for summer jobs, seasonal work, and part-time jobs tailored for those taking their first steps in the workforce.",
+                audience_flex_title: "Temporary & Hourly Work",
+                audience_flex_desc: "Find flexible assignments, quick entries, and temporary positions structured directly in your personal pipeline.",
+                audience_volunteer_title: "Volunteer & Non-profit",
+                audience_volunteer_desc: "Build valuable practical experience for your resume while making a real difference in society.",
+
+                // Why Section
+                why_heading: "Why JobHawk?",
+                why1: "Jobs from multiple sources",
+                why2: "Fewer duplicates",
+                why3: "Swipe through relevant jobs",
+                why4: "Build your own job pipeline",
+                why5: "Tailor CVs and cover letters",
+                why6: "One workflow for the entire job search",
+
+                // Comparison Table
                 comp_heading: "ChatGPT vs JobHawk",
-                comp_sub: "See why a specialized platform makes all the difference for your job search.",
-                th_feature: "Feature",
+                comp_sub: "See why a dedicated data structure and a coherent workflow make all the difference.",
+                th_feature: "Feature / Infrastructure",
                 th_chatgpt: "ChatGPT",
                 th_jobhawk: "JobHawk",
-                row1_f: "Helps you write a CV",
+                row1_f: "Helps you write & optimize your CV",
                 row2_f: "Helps you write a cover letter",
-                row3_f: "Finds relevant jobs automatically",
-                row4_f: "Gathers jobs from multiple sources",
-                row5_f: "Matches your CV against job listings",
-                row6_f: "Tailors CV for each job",
-                row7_f: "Tailors cover letter for each job",
-                row8_f: "Manages multiple jobs simultaneously",
-                row9_f: "One workflow for your entire job hunt",
-                row10_f: "Built specifically for Nordic job seekers",
+                row3_f: "Aggregates & finds jobs automatically",
+                row4_f: "Fetches and cleans data from multiple sources",
+                row5_f: "Automatically cleans duplicates in the feed",
+                row6_f: "Contextual matching against listing requirements",
+                row7_f: "Manages multiple jobs parallel in a pipeline",
+                row8_f: "A coherent and unified workflow",
+                row9_f: "Built specifically for Nordic job seekers",
                 val_partial: "Partial",
                 val_manual: "Manual",
                 val_auto: "✨ Automatic",
+
+                // Pricing
                 pricing_heading: "Flexible passes for your needs",
                 pricing_sub: "One-time purchases with zero hidden subscription traps while actively hunting.",
                 free_badge: "Standard",
                 free_title: "Free Version",
-                free_desc: "Perfekt för dig som vill komma igång direkt utan kostnad.",
+                free_desc: "Perfect for those who want to get started right away at no cost.",
                 free_f1: "Create and send your first application",
-                free_f2: "Basic AI matching",
+                free_f2: "Basic data matching",
                 free_f3: "Watch a reward video for extra time-savers",
                 free_btn: "Get started for free",
                 pro_pop: "Most Popular",
@@ -418,7 +468,7 @@
                 pro_desc: "One-time purchase without hidden subscription traps while actively hunting.",
                 pro_f1: "100% ad-free interface",
                 pro_f2: "Unlimited clean PDF downloads (watermark-free)",
-                pro_f3: "Personal AI career coach (20 messages/day)",
+                pro_f3: "Personal career coach (20 messages/day)",
                 pro_f4: "Application pipeline & smart tracking",
                 select_validity: "Select validity period:",
                 btn_3d: "3 Days Pro — 29 kr",
@@ -433,37 +483,33 @@
             }
         };
 
-        function setLanguage(lang) {
-            localStorage.setItem('jobhawk_lang', lang);
-            document.documentElement.setAttribute('lang', lang);
 
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
-            });
-
-            const svBtn = document.getElementById('lang-sv');
-            const enBtn = document.getElementById('lang-en');
-
-            if (lang === 'en') {
-                enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-                svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-            } else {
-                svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-                enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('jobhawk_lang');
-            
-            const selectedLang = urlLang || savedLang || 'sv';
-            setLanguage(selectedLang);
-        });
+function setLanguage(lang) {
+localStorage.setItem('jobhawk_lang', lang);
+document.documentElement.setAttribute('lang', lang);
+document.querySelectorAll('[data-i18n]').forEach(el => {
+const key = el.getAttribute('data-i18n');
+if (translations[lang] && translations[lang][key]) {
+el.textContent = translations[lang][key];
+}
+});
+const svBtn = document.getElementById('lang-sv');
+const enBtn = document.getElementById('lang-en');
+if (lang === 'en') {
+if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+} else {
+if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+}
+}
+document.addEventListener('DOMContentLoaded', () => {
+const urlParams = new URLSearchParams(window.location.search);
+const urlLang = urlParams.get('lang');
+const savedLang = localStorage.getItem('jobhawk_lang');
+const selectedLang = urlLang || savedLang || 'sv';
+setLanguage(selectedLang);
+});
     </script>
 </body>
 </html>
