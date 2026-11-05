@@ -317,11 +317,12 @@
         </div>
     </footer>
 
-<!-- SPRÅKLOGIK OCH ÖVERSÄTTNINGAR -->
+    <!-- SPRÅKLOGIK OCH ÖVERSÄTTNINGAR -->
     <script>
         const translations = {
             sv: {
-                meta_title: "JobHawk – Hitta jobb, organisera ansökningar",
+                meta_title: "JobHawk – Alla jobb. Ett arbetsflöde.",
+                meta_desc: "JobHawk samlar jobb från flera källor, filtrerar bort dubletter och hjälper dig att hantera hela jobbsökandet från ett och samma ställe.",
                 nav_home: "HawkLabs",
                 nav_comparison: "Jämförelse",
                 nav_pricing: "Priser",
@@ -332,8 +333,8 @@
                 btn_get_started: "Kom igång direkt →",
                 
                 // Målgrupps-sektionen
-                audiences_heading: "Skräddarsytt för alla vägar i arbetslivet",
-                audiences_sub: "JobHawk hjälper olika typer av arbetssökande att navigera rätt och nå sina mål snabbare.",
+                audiences_heading: "Hitta jobb på ditt sätt",
+                audiences_sub: "JobHawk hjälper olika typer av arbetssökande att hitta rätt möjligheter snabbare.",
                 audience_senior_title: "Senior 55+",
                 audience_senior_desc: "Hitta seniorvänliga jobb, konsultuppdrag och deltidsroller utan algoritmer som gallrar bort dig baserat på ålder.",
                 audience_youth_title: "Ungdom 15–17 år",
@@ -401,7 +402,8 @@
                 footer_contact: "Kontakt"
             },
             en: {
-                meta_title: "JobHawk – Find jobs, organize applications",
+                meta_title: "JobHawk – All jobs. One workflow.",
+                meta_desc: "JobHawk collects jobs from multiple sources, filters out duplicates, and helps you manage your entire job search from one place.",
                 nav_home: "HawkLabs",
                 nav_comparison: "Comparison",
                 nav_pricing: "Pricing",
@@ -412,8 +414,8 @@
                 btn_get_started: "Get started now →",
                 
                 // Audiences Section
-                audiences_heading: "Tailored for all paths in working life",
-                audiences_sub: "JobHawk helps different types of job seekers navigate correctly and reach their goals faster.",
+                audiences_heading: "Find jobs your way",
+                audiences_sub: "JobHawk helps different types of job seekers find the right opportunities faster.",
                 audience_senior_title: "Senior 55+",
                 audience_senior_desc: "Find senior-friendly jobs, consulting assignments, and part-time roles without algorithms filtering you out based on age.",
                 audience_youth_title: "Youth 15–17 years",
@@ -479,35 +481,40 @@
                 footer_cookies: "Cookies",
                 footer_privacy: "Privacy Policy",
                 footer_contact: "Contact"
-            }
-        };
-
-
-function setLanguage(lang) {
-localStorage.setItem('jobhawk_lang', lang);
-document.documentElement.setAttribute('lang', lang);
-document.querySelectorAll('[data-i18n]').forEach(el => {
-const key = el.getAttribute('data-i18n');
-if (translations[lang] && translations[lang][key]) {
-el.textContent = translations[lang][key];
-}
-});
-const svBtn = document.getElementById('lang-sv');
-const enBtn = document.getElementById('lang-en');
-if (lang === 'en') {
-if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-} else {
-if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
-if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
-}
-}
-document.addEventListener('DOMContentLoaded', () => {
-const urlParams = new URLSearchParams(window.location.search);
-const urlLang = urlParams.get('lang');
-const savedLang = localStorage.getItem('jobhawk_lang');
-const selectedLang = urlLang || savedLang || 'sv';
-setLanguage(selectedLang);
+                }
+            };
+            function setLanguage(lang) {
+                localStorage.setItem('jobhawk_lang', lang);
+                document.documentElement.setAttribute('lang', lang);
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+    // SÄKER KONTROLL FÖR ATT UPPDATERA DINA META-TAGGAR PÅ BÅDA SPRÅKEN
+                if (el.tagName === 'META') {
+                el.setAttribute('content', translations[lang][key]);
+                } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.setAttribute('placeholder', translations[lang][key]);
+                } else {
+                el.textContent = translations[lang][key];
+                }
+                }
+            });
+                const svBtn = document.getElementById('lang-sv');
+                const enBtn = document.getElementById('lang-en');
+                if (lang === 'en') {
+                if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+                if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+                } else {
+                if (svBtn) svBtn.className = "px-2.5 py-1 rounded font-bold bg-accent text-darkbg transition";
+                if (enBtn) enBtn.className = "px-2.5 py-1 rounded font-bold text-[var(--hawk-muted)] hover:text-white transition";
+                }
+                }
+                document.addEventListener('DOMContentLoaded', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                const savedLang = localStorage.getItem('jobhawk_lang');
+                const selectedLang = urlLang || savedLang || 'sv';
+                setLanguage(selectedLang);
 });
     </script>
 </body>
