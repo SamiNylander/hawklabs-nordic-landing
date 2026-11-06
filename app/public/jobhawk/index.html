@@ -323,12 +323,15 @@
                 </div>
 
                 <!-- Köpknapp: uppdateras av valet -->
-                <a id="hk-cta" href="https://buy.stripe.com/aFa3co4dug1Tgt039tf7i03" target="_blank" rel="noopener" class="hk-cta">
+                <a id="hk-cta" href="https://jobhawk.se/upgrade?plan=7d&source=pricing" class="hk-cta">
                     <span data-i18n="cta_activate">Aktivera</span> <span id="hk-cta-plan">7 dagar — 49 kr</span>
                 </a>
 
                 <p class="mt-4 text-center text-xs text-[var(--hawk-muted)]" data-i18n="trust_line">
                     Engångsbetalning, ingen automatisk förnyelse. Säker betalning via Stripe.
+                </p>
+                <p class="mt-2 text-center text-xs text-[var(--hawk-muted)]" data-i18n="trust_age">
+                Köp görs av personer som fyllt 18 år.
                 </p>
             </div>
         </div>
@@ -349,7 +352,7 @@
         const price = sel.querySelector('.hk-opt-price').textContent.trim().replace(/(\d)(kr)/i, '$1 $2');
         const text = name + ' — ' + price;
         if (ctaPlan.textContent !== text) ctaPlan.textContent = text;
-        cta.href = sel.dataset.href;
+        cta.href = sel.dataset.href + '&lang=' + (document.documentElement.lang || 'sv');
     }
 
     function select(opt) {
@@ -464,6 +467,7 @@
                 footer_cookies: "Kakor",
                 footer_privacy: "Privacy Policy",
                 footer_contact: "Kontakt",
+                trust_age: "Köp görs av personer som fyllt 18 år.",
              },
             en: {
                 meta_title: "JobHawk – All jobs. One workflow.",
@@ -545,6 +549,7 @@
                 footer_cookies: "Cookies",
                 footer_privacy: "Privacy Policy",
                 footer_contact: "Contact"
+                trust_age: "Purchases are made by people aged 18 or older.",
                 }
             };
             function setLanguage(lang) {
